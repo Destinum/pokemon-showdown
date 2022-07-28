@@ -19747,7 +19747,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 // Start of Fakemon Moves
 
 
-    aridgale: {
+	aridgale: {
 		num: 9000,
 		accuracy: 100,
 		basePower: 80,
@@ -19756,14 +19756,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-        onModifyMove(move, pokemon) {
+		onModifyMove(move, pokemon) {
 			switch (pokemon.effectiveWeather()) {
 			case 'sandstorm':
 				move.basePower *= 1.5;
 				break;
 			}
 		},		
-        secondary: null,
+		secondary: null,
 		target: "normal",
 		type: "Flying",
 		contestType: "Clever",
