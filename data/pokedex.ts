@@ -17666,4 +17666,20 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+
+
+//Start of Fakemons
+
+
+    emperoc: {
+		num: 4201,
+		name: "Emperoc",
+		types: ["Rock", "Flying"],
+		baseStats: {hp: 150, atk: 75, def: 70, spa: 97, spd: 70, spe: 90},
+		abilities: {0: "Dazzling"},
+		heightm: 10.2,
+		weightkg: 500,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 };

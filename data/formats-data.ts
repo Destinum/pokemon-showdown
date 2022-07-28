@@ -6610,4 +6610,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+
+//Start of Fakemons
+
+    emperoc: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+
 };

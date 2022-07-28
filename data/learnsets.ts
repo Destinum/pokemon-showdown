@@ -83031,4 +83031,26 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			{generation: 5, level: 47, moves: ["darkpulse", "flamethrower", "hyperbeam", "icebeam"]},
 		],
 	},
+
+//Start of Fakemons
+
+	emperoc: {
+		learnset: {
+			airslash: ["8M"],
+			hurricane: ["8M"],
+			dualwingbeat: ["8M"],
+			bravebird: ["8M"],
+			powergem: ["8M"],
+			meteorbeam: ["8M"],
+			rockslide: ["8M"],
+			stoneedge: ["8M"],
+			flamethrower: ["8M"],
+			scorchingsands: ["8M"],
+			flashcannon: ["8M"],
+			dazzlinggleam: ["8M"],
+			roost: ["8M"],
+			defog: ["8M"],
+		},
+	},
+
 };
