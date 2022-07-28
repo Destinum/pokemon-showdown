@@ -83036,7 +83036,8 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 
 	emperoc: {
 		learnset: {
-			airslash: ["8M"],
+            aridgale: ["8M"],			
+            airslash: ["8M"],
 			hurricane: ["8M"],
 			dualwingbeat: ["8M"],
 			bravebird: ["8M"],

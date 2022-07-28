@@ -19741,4 +19741,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+
+
+
+// Start of Fakemon Moves
+
+
+    aridgale: {
+		num: 9000,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Arid Gale",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+        onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sandstorm':
+				move.basePower *= 1.5;
+				break;
+			}
+		},		
+        secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Clever",
+	},
+
 };
