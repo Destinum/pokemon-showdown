@@ -1736,4 +1736,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	
+	// Fakemon
+	
+	resilient: {
+		name: "Resilient",
+		desc: "This Pokemon can only be damaged by direct attacks.",
+		shortDesc: "This Pokemon can only be damaged by direct attacks.",
+	},
+	nobleradiance: {
+		name: "Noble Radiance",
+		desc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
+		shortDesc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
+
+		start: "  [POKEMON]'s noble radiance is weakening Dark- and Ice-type moves!",
+	},
 };

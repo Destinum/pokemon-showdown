@@ -4502,33 +4502,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Resilient",
 		rating: 4,
 		num: 9000,
-		desc: "This Pokemon can only be damaged by direct attacks.",
-		shortDesc: "This Pokemon can only be damaged by direct attacks.",
-	},
-	/*nobleradiance: {		//Incomplete
-		onStart(pokemon) {
-			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Dark Aura');
-		},
-		onAnyBasePowerPriority: 20,
-		onAnyBasePower(basePower, source, target, move) {
-			if (target === source || move.category === 'Status' || move.type !== 'Dark') return;
-			if (!move.auraBooster) move.auraBooster = this.effectState.target;
-			if (move.auraBooster !== this.effectState.target) return;
-			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
-		},
-		name: "Noble Radiance",
-		rating: 3,
-		num: 9001,
-	},*/
-		
+	},	
 	nobleradiance: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Noble Radiance');
 		},
 		onAnyBasePowerPriority: 22,
 		onAnyBasePower(basePower, attacker, defender, move) {
-			if (move.type === 'Ice' || move.type === 'Dark') {
+			if (move.type === 'Dark' || move.type === 'Ice') {
 				this.debug('Noble Radiance reduction');
 				return this.chainModify(2/3);
 			}
@@ -4536,8 +4517,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Noble Radiance",
 		rating: 3.5,
 		num: 9001,
-		desc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
-		shortDesc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
 	},
 		
 };

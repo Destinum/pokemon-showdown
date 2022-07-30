@@ -17726,4 +17726,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
+	burningtree: {
+		num: 4206,
+		name: "Burning Tree",
+		types: ["Grass", "Fire"],
+		baseStats: {hp: 95, atk: 110, def: 100, spa: 80, spd: 85, spe: 55},
+		abilities: {0: "Flash Fire", H: "Drought"},
+		heightm: 5.0,
+		weightkg: 600,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 };

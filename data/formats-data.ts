@@ -6633,5 +6633,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	burningtree: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };

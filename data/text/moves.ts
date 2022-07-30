@@ -6854,4 +6854,21 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
 	},
+	
+	// Fakemon
+	aridgale: {
+		name: "Arid Gale",
+		desc: "Damage is increased by 50% during a Sandstorm.",
+		shortDesc: "Damage is increased by 50% during a Sandstorm.",
+	},
+	frigidgale: {
+		name: "Frigid Gale",
+		desc: "Damage is increased by 50% during Hail.",
+		shortDesc: "Damage is increased by 50% during Hail.",
+	},
+	icebreaker: {
+		name: "Icebreaker",
+		desc: "Has 33% recoil.",
+		shortDesc: "Has 33% recoil.",
+	},
 };

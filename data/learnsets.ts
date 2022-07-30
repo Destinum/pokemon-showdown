@@ -83126,5 +83126,24 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			healpulse: ["8M"],
 		},
 	},
+	burningtree: {
+		learnset: {
+            firelash: ["8M"],			
+            flamethrower: ["8M"],
+			fireblast: ["8M"],			
+            solarblade: ["8M"],
+			woodhammer: ["8M"],			
+            seedbomb: ["8M"],
+			gigadrain: ["8M"],			
+            solarbeam: ["8M"],
+			earthquake: ["8M"],			
+            synthesis: ["8M"],
+			willowisp: ["8M"],			
+            knockoff: ["8M"],
+			curse: ["8M"],			
+            protect: ["8M"],
+			hornleech: ["8M"],
+		},
+	},
 
 };
