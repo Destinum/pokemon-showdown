@@ -4524,7 +4524,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		
 	nobleradiance: {
 		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Dark Aura');
+			this.add('-ability', pokemon, 'Noble Radiance');
 		},
 		onAnyBasePowerPriority: 22,
 		onAnyBasePower(basePower, attacker, defender, move) {
