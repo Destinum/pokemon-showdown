@@ -4505,7 +4505,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		desc: "This Pokemon can only be damaged by direct attacks.",
 		shortDesc: "This Pokemon can only be damaged by direct attacks.",
 	},
-	nobleradiance: {		//Incomplete
+	/*nobleradiance: {		//Incomplete
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Dark Aura');
@@ -4520,6 +4520,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Noble Radiance",
 		rating: 3,
 		num: 9001,
+	},*/
+		
+	nobleradiance: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Dark Aura');
+		},
+		onAnyBasePowerPriority: 22,
+		onAnyBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Ice' || move.type === 'Dark') {
+				this.debug('Noble Radiance reduction');
+				return this.chainModify(2/3);
+			}
+		},
+		name: "Noble Radiance",
+		rating: 3.5,
+		num: 9001,
+		desc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
+		shortDesc: "While this Pokemon is active, the power of Dark-type and Ice-type moves is multiplied by 2/3.",
 	},
 		
 };
