@@ -6629,5 +6629,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	sundragon: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };

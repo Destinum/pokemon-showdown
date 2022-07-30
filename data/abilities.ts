@@ -4502,8 +4502,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Resilient",
 		rating: 4,
 		num: 9000,
-		desc: "Resilient desc",
-		shortDesc: "Resilient shortDesc",
+		desc: "This Pokemon can only be damaged by direct attacks.",
+		shortDesc: "This Pokemon can only be damaged by direct attacks.",
 	},
 	nobleradiance: {		//Incomplete
 		onStart(pokemon) {

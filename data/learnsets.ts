@@ -83103,5 +83103,28 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			defog: ["8M"],
 		},
 	},
+	sundragon: {
+		learnset: {
+            fireblast: ["8M"],			
+            flamethrower: ["8M"],
+			dragonpulse: ["8M"],
+			dracometeor: ["8M"],
+			solarbeam: ["8M"],
+			thunderbolt: ["8M"],
+			dazzlinggleam: ["8M"],
+			psychic: ["8M"],
+			sunnyday: ["8M"],
+			morningsun: ["8M"],
+			calmmind: ["8M"],
+			willowisp: ["8M"],
+			mirrorcoat: ["8M"],
+			counter: ["8M"],
+			magiccoat: ["8M"],
+			followme: ["8M"],
+			wideguard: ["8M"],
+			quickguard: ["8M"],
+			healpulse: ["8M"],
+		},
+	},
 
 };
