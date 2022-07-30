@@ -4489,4 +4489,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	
+// Start of Fakemon Abilities
+		
+	resilient: {
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		name: "Resilient",
+		rating: 4,
+		num: 9000,
+		desc: "Resilient desc",
+		shortDesc: "Resilient shortDesc",
+	},
 };

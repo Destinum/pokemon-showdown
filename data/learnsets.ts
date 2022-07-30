@@ -83053,5 +83053,38 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			defog: ["8M"],
 		},
 	},
+	grassstarter: {
+		learnset: {
+            gigadrain: ["8M"],			
+            moonblast: ["8M"],
+			drainingkiss: ["8M"],
+			energyball: ["8M"],
+			pollenpuff: ["8M"],
+			psychic: ["8M"],
+			uturn: ["8M"],
+			aromatherapy: ["8M"],
+			sleeppowder: ["8M"],
+			stunspore: ["8M"],
+			poisonpowder: ["8M"],
+			trick: ["8M"],
+			leechseed: ["8M"],
+			defog: ["8M"],
+			lightscreen: ["8M"],
+			reflect: ["8M"],
+			moonlight: ["8M"],
+			quiverdance: ["8M"],
+		},
+	},
+	firestarter: {
+		learnset: {
+            icebreaker: ["8M"],			
+            flareblitz: ["8M"],
+			wildcharge: ["8M"],
+			headsmash: ["8M"],
+			ironhead: ["8M"],
+			zenheadbutt: ["8M"],
+			bulkup: ["8M"],
+		},
+	},
 
 };
