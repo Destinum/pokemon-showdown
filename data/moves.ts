@@ -19751,7 +19751,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 80,
 		category: "Special",
 		desc: "Damage is increased by 50% during a Sandstorm.",
-		shortDesc: "Power is increased by 50% during a Sandstorm.",
+		shortDesc: "Damage is increased by 50% during a Sandstorm.",
 		name: "Arid Gale",
 		pp: 10,
 		priority: 0,
@@ -19759,6 +19759,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onModifyMove(move, pokemon) {
 			switch (pokemon.effectiveWeather()) {
 			case 'sandstorm':
+				move.basePower = 120;
+				break;
+			}
+		},		
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Clever",
+	},
+	frigidgale: {
+		num: 9001,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		desc: "Damage is increased by 50% during Hail.",
+		shortDesc: "Damage is increased by 50% during Hail.",
+		name: "Frigid Gale",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'hail':
 				move.basePower = 120;
 				break;
 			}
