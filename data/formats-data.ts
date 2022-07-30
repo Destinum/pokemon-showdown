@@ -6625,5 +6625,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	waterstarter: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };

@@ -4505,4 +4505,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		desc: "Resilient desc",
 		shortDesc: "Resilient shortDesc",
 	},
+	nobleradiance: {		//Incomplete
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Dark Aura');
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Dark') return;
+			if (!move.auraBooster) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+		},
+		name: "Noble Radiance",
+		rating: 3,
+		num: 9001,
+	},
+		
 };

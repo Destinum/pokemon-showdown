@@ -83086,5 +83086,22 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			bulkup: ["8M"],
 		},
 	},
+	waterstarter: {
+		learnset: {
+            surf: ["8M"],			
+            hydropump: ["8M"],
+			scald: ["8M"],
+			dragonpulse: ["8M"],
+			dracometeor: ["8M"],
+			flipturn: ["8M"],
+			weatherball: ["8M"],
+			icebeam: ["8M"],
+			hurricane: ["8M"],
+			thunder: ["8M"],
+			calmmind: ["8M"],
+			dragondance: ["8M"],
+			defog: ["8M"],
+		},
+	},
 
 };
