@@ -6617,5 +6617,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	grassstarter: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	firestarter: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };
