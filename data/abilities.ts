@@ -4530,6 +4530,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.boost({accuracy: 1}, pokemon);
 		},
+		onEnd(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Hide and Seek', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({spe: -1}, target, pokemon, null, true);
+				}
+			}
+		},
 		name: "Hide and Seek",
 		rating: 3.5,
 		num: 22,

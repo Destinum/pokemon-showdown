@@ -1751,4 +1751,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON]'s noble radiance is weakening Dark- and Ice-type moves!",
 	},
+	hideandseek: {
+		name: "Hide and Seek",
+		desc: "On switch in, raises accuracy of allies (including itself) by one stage. On switch out, lowers speed of opponents by one stage.",
+		shortDesc: "On switch in, raises accuracy of allies (including itself) by one stage. On switch out, lowers speed of opponents by one stage.",
+	},
 };
