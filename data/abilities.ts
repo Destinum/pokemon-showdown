@@ -4526,8 +4526,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-ability', pokemon, 'Hide and Seek', 'boost');
 					activated = true;
 				}
-				this.boost({acc: +1}, target, pokemon, null, true);
+				this.boost({accuracy: 1}, target, pokemon, null, true);
 			}
+			this.boost({accuracy: 1}, pokemon);
 		},
 		name: "Hide and Seek",
 		rating: 3.5,
