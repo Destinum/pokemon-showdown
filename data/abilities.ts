@@ -4518,5 +4518,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 9001,
 	},
+	hideandseek: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentAllies()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Hide and Seek', 'boost');
+					activated = true;
+				}
+				this.boost({acc: +1}, target, pokemon, null, true);
+			}
+		},
+		name: "Hide and Seek",
+		rating: 3.5,
+		num: 22,
+	},
 		
 };

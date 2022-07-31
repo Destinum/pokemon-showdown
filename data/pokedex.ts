@@ -17687,7 +17687,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Grass Starter",
 		types: ["Grass", "Fairy"],
 		baseStats: {hp: 70, atk: 77, def: 65, spa: 100, spd: 100, spe: 118},
-		abilities: {0: "Overgrow"},
+		abilities: {0: "Overgrow", H: "Hide and Seek"},
 		heightm: 0.5,
 		weightkg: 10,
 		color: "Green",
