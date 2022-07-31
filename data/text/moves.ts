@@ -6855,7 +6855,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 	},
 	
-	// Fakemon
+	// Fakemon moves
+	
 	aridgale: {
 		name: "Arid Gale",
 		desc: "Damage is increased by 50% during a Sandstorm.",
@@ -6870,5 +6871,35 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Icebreaker",
 		desc: "Has 33% recoil.",
 		shortDesc: "Has 33% recoil.",
+	},
+	witheringgrasp: {
+		name: "Withering Grasp",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. Additionally, damage is doubled against Grass- and Water-types.",
+		shortDesc: "The user recovers 1/2 the HP lost by the target, rounded half up. Additionally, damage is doubled against Grass- and Water-types.",
+	},		
+	mercurybomb: {
+		name: "Mercury Bomb",
+		desc: "Has a 30% chance to poison the target.",
+		shortDesc: "30% chance to poison the target.",
+	},
+	magicacid: {
+		name: "Magic Acid",
+		desc: "Can affect Steel-types and has a 10% chance to leave the target with a burn.",
+		shortDesc: "Can affect Steel-types and has a 10% chance to leave the target with a burn.",
+	},
+	unstableconcoction: {
+		name: "Unstable Concoction",
+		desc: "Has a 10% chance to explode prematurely, hitting the user instead as if it attacked itself.",
+		shortDesc: "Has a 10% chance to explode prematurely, hitting the user instead as if it attacked itself.",
+	},
+	lastbreath: {
+		name: "Last Breath",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "User cannot move next turn.",
+	},
+	battlecry: {
+		name: "Battle Cry",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
 };

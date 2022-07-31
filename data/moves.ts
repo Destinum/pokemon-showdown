@@ -19802,5 +19802,238 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Cool",
 	},
-
+	witheringgrasp: {			//Might be finished?
+		num: 9003,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Withering Grasp",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.type === 'Water' || target.type === 'Grass') {
+				return this.chainModify(2);
+			}
+		},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Tough",
+	},		
+	mercurybomb: {
+		num: 9004,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Mercury Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+	},
+	magicacid: {			//Might be finished?
+		num: 9005,
+		accuracy: 80,
+		basePower: 110,
+		category: "Special",
+		name: "Magic Acid",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			if (move.type !== 'Poison') return;
+			if (!target) return; // avoid crashing when called from a chat plugin
+			// ignore effectiveness if the target is Steel type and immune to Poison
+			if (!target.runImmunity('Poison')) {
+				if (target.hasType('Steel')) return 0;
+			}
+		},
+		ignoreImmunity: {'Poison': true},
+		secondary: {
+			chance: 50,				//Should be 10%
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Smart",
+	},			
+	unstableconcoction: {			//Might be finished? Probably unfinished though
+		num: 9006,
+		accuracy: 100,
+		basePower: 160,
+		category: "Special",
+		name: "Unstable Concoction",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeMoveCallback(pokemon) {
+			if (this.randomChance(1, 2)) {			//Should be this.randomChance(1, 10)
+				this.target = pokemon;
+			}	
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Smart",
+	},
+	/*highjumpkick: {
+		num: 136,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "High Jump Kick",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+	},
+	mindblown: {
+		num: 720,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Mind Blown",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Mind Blown'), true);
+			}
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	focuspunch: {
+		num: 264,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Focus Punch",
+		pp: 20,
+		priority: -3,
+		flags: {contact: 1, protect: 1, punch: 1},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile('focuspunch');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.volatiles['focuspunch']?.lostFocus) {
+				this.add('cant', pokemon, 'Focus Punch', 'Focus Punch');
+				return true;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Focus Punch');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					this.effectState.lostFocus = true;
+				}
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'flinch') return null;
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	followme: {
+		num: 266,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Follow Me",
+		pp: 20,
+		priority: 2,
+		flags: {},
+		volatileStatus: 'followme',
+		onTry(source) {
+			return this.activePerHalf > 1;
+		},
+		condition: {
+			duration: 1,
+			onStart(target, source, effect) {
+				if (effect?.id === 'zpower') {
+					this.add('-singleturn', target, 'move: Follow Me', '[zeffect]');
+				} else {
+					this.add('-singleturn', target, 'move: Follow Me');
+				}
+			},
+			onFoeRedirectTargetPriority: 1,
+			onFoeRedirectTarget(target, source, source2, move) {
+				if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
+					if (move.smartTarget) move.smartTarget = false;
+					this.debug("Follow Me redirected target of move");
+					return this.effectState.target;
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
+	},*/	
+		
+		
+		
+		
+		
+		
+		
+		
+	lastbreath: {
+		num: 9007,
+		accuracy: 90,
+		basePower: 150,
+		category: "Special",
+		name: "Last Breath",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Cool",
+	},
+	battlecry: {
+		num: 9008,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Battle Cry",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fighting",
+		contestType: "Cool",
+	},
+		
 };

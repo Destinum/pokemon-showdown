@@ -6637,5 +6637,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	spookypebbles: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	mercuryalchemist: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	valkyriealicorn: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };

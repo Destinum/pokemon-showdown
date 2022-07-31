@@ -1756,4 +1756,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "On switch in, raises accuracy of allies (including itself) by one stage. On switch out, lowers speed of opponents by one stage.",
 		shortDesc: "On switch in, raises accuracy of allies (including itself) by one stage. On switch out, lowers speed of opponents by one stage.",
 	},
+	windsofwar: {
+		name: "Winds of War",
+		desc: "Sets up a Tailwind after knocking out an opponent with an attack. Does nothing if Tailwind is already in effect.",
+		shortDesc: "Sets up a Tailwind after knocking out an opponent with an attack. Does nothing if Tailwind is already in effect.",
+	},
+	envoyoffólkvangr: {
+		name: "Envoy of Fólkvangr",
+		desc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
+		shortDesc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
+	},
 };

@@ -4546,7 +4546,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Hide and Seek",
 		rating: 3.5,
-		num: 22,
+		num: 9002,
 	},
-		
+	windsofwar: {			//Unfinished
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		name: "Winds of War",
+		rating: 4,
+		num: 9003,
+	},
+	envoyoffólkvangr: {			//Unfinished
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		name: "Envoy of Fólkvangr",
+		rating: 4,
+		num: 9004,
+	},
 };
