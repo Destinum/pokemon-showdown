@@ -6891,7 +6891,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Unstable Concoction",
 		desc: "Has a 10% chance to explode prematurely, hitting the user instead as if it attacked itself.",
 		shortDesc: "Has a 10% chance to explode prematurely, hitting the user instead as if it attacked itself.",
-		premature: "  [POKEMON]'s Unstable Concoction exploded prematurely!",
+		start: "  [POKEMON]'s Unstable Concoction exploded prematurely!",
 	},
 	lastbreath: {
 		name: "Last Breath",
