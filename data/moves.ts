@@ -19876,7 +19876,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (this.randomChance(1, 1)) {
+			if (this.randomChance(1, 10)) {
 				move.target = "self";
 				move.accuracy = true;
 				this.add('-end', pokemon, 'Unstable Concoction');
@@ -19884,7 +19884,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		//target: "self",
 		type: "Fire",
 		contestType: "Smart",
 	},			
