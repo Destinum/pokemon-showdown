@@ -83183,6 +83183,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			destinybond: ["8M"],
 			stealthrock: ["8M"],
 			taunt: ["8M"],
+		},
 	},
 	mercuryalchemist: {
 		learnset: {
@@ -83205,6 +83206,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			corrosivegas: ["8M"],
 			venomdrench: ["8M"],
 			toxicspikes: ["8M"],
+		},
 	},
 	valkyriealicorn: {
 		learnset: {
@@ -83236,6 +83238,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			wish: ["8M"],
 			healingwish: ["8M"],
 			whirlwind: ["8M"],
+		},
 	},
-
 };
