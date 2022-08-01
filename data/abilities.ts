@@ -4596,4 +4596,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 9006,
 	},
+	charge: {		//Not finished
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Light Eater');
+				}
+				return null;
+			}
+		},
+		name: "Charge",
+		rating: 3.5,
+		num: 9007,
+	},
 };

@@ -19918,7 +19918,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Cool",
 	},
-	blackhole: {
+	blackhole: {		//Referenced in src/battle-animations.ts and src/battle-text-parser.ts on the client side.
 		num: 9009,
 		accuracy: 85,
 		basePower: 50,
@@ -19927,14 +19927,48 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		volatileStatus: 'partiallytrapped',
-		/*onStart(pokemon, source, effect) {
-			this.add('-start', pokemon, 'Black Hole');
-		},*/	
+		volatileStatus: 'partiallytrapped',	
 		secondary: null,
 		target: "normal",
 		type: "Dark",
 		contestType: "Beautiful",
 	},
+	cavalrylance: {
+		num: 9010,
+		accuracy: 100,
+		basePower: 85,
+		basePowerCallback(pokemon, target, move) {
+			if (target.newlySwitched || this.queue.willMove(target)) {
+				this.debug('Cavalry Lance guaranteed crit');
+				move.willCrit = true;
+				return move.basePower;
+			}
+			this.debug('Cavalry Lance NOT boosted');
+			return move.basePower;
+		},
+		category: "Physical",
+		name: "Cavalry Lance",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	
+	/*wickedblow: {
+		num: 817,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Wicked Blow",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},*/
 		
 };

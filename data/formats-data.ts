@@ -6657,5 +6657,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	moosecentaur: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	ankylosaurus: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };
