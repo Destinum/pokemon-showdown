@@ -17764,7 +17764,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Valkyrie Alicorn",
 		types: ["Ghost", "Flying"],
 		baseStats: {hp: 90, atk: 90, def: 80, spa: 130, spd: 100, spe: 110},
-		abilities: {0: "Mold Breaker", 1: "Winds of War", H: "Envoy of Fólkvangr"},
+		abilities: {0: "Mold Breaker", 1: "Winds of War", H: "Envoy of Folkvangr"},
 		heightm: 5.0,
 		weightkg: 600,
 		color: "Green",

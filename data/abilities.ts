@@ -4629,10 +4629,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (effect && effect.effectType === 'Move') {
 				//this.boost({atk: length}, source);
 				source.switchFlag = true;
-				this.add('-activate', source, 'ability: Envoy of Fólkvangr');
+				this.add('-activate', source, 'ability: Envoy of Folkvangr');
 			}
 		},
-		name: "Envoy of Fólkvangr",
+		name: "Envoy of Folkvangr",
 		rating: 4,
 		num: 9004,
 	},

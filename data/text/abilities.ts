@@ -1762,7 +1762,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Sets up a Tailwind after knocking out an opponent with an attack. Does nothing if Tailwind is already in effect.",
 	},
 	envoyoffolkvangr: {
-		name: "Envoy of Fólkvangr",
+		name: "Envoy of Folkvangr",
 		desc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
 		shortDesc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
 		
