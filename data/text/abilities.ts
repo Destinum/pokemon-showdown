@@ -1765,5 +1765,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Envoy of Fólkvangr",
 		desc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
 		shortDesc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
+		
+		activate: "  [SOURCE] left the battlefield!",
 	},
 };

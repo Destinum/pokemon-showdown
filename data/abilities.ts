@@ -4548,6 +4548,71 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 9002,
 	},
+		
+	/*moxie: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({atk: length}, source);
+			}
+		},
+		name: "Moxie",
+		rating: 3,
+		num: 153,
+	},
+	grimneigh: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source);
+			}
+		},
+		name: "Grim Neigh",
+		rating: 3,
+		num: 265,
+	},
+	sandstream: {
+		onStart(source) {
+			this.field.setWeather('sandstorm');
+		},
+		name: "Sand Stream",
+		rating: 4,
+		num: 45,
+	},
+	emergencyexit: {
+		onEmergencyExit(target) {
+			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+			for (const side of this.sides) {
+				for (const active of side.active) {
+					active.switchFlag = false;
+				}
+			}
+			target.switchFlag = true;
+			this.add('-activate', target, 'ability: Emergency Exit');
+		},
+		name: "Emergency Exit",
+		rating: 1,
+		num: 194,
+	},
+	wimpout: {
+		onEmergencyExit(target) {
+			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+			for (const side of this.sides) {
+				for (const active of side.active) {
+					active.switchFlag = false;
+				}
+			}
+			target.switchFlag = true;
+			this.add('-activate', target, 'ability: Wimp Out');
+		},
+		name: "Wimp Out",
+		rating: 1,
+		num: 193,
+	},*/	
+		
+		
+		
+		
+		
+		
 	windsofwar: {			//Unfinished
 		onDamage(damage, target, source, effect) {
 			if (effect.effectType !== 'Move') {
@@ -4560,10 +4625,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 9003,
 	},
 	envoyoffólkvangr: {			//Unfinished
-		onDamage(damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
-				return false;
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				//this.boost({atk: length}, source);
+				source.switchFlag = true;
+				this.add('-activate', source, 'ability: Envoy of Fólkvangr');
 			}
 		},
 		name: "Envoy of Fólkvangr",
