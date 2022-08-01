@@ -19879,7 +19879,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (this.randomChance(1, 1)) {
 				move.target = "self";
 				move.accuracy = true;
-				this.add('damage', pokemon, 'Unstable Concoction');
+				this.add('-damage', pokemon, 'Unstable Concoction');
 				//this.debug("The Unstable Concoction exploded prematurely!");
 			}	
 		},
