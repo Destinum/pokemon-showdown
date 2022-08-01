@@ -19927,9 +19927,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (this.randomChance(1, 2)) {			//Should be this.randomChance(1, 10)
+			if (this.randomChance(1, 1)) {			//Should be this.randomChance(1, 10)
 				move.target = "self";	
-				this.debug("The Unstable Concoction exploded prematurely!");
+				//this.debug("The Unstable Concoction exploded prematurely!");
 			}	
 		},
 		secondary: null,
