@@ -19802,7 +19802,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Cool",
 	},
-	witheringgrasp: {			//Might be finished?
+	witheringgrasp: {			//Not Finished
 		num: 9003,
 		accuracy: 100,
 		basePower: 70,
@@ -19813,7 +19813,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
 		onBasePower(basePower, pokemon, target) {
 			if (target.type === 'Water' || target.type === 'Grass') {
-				return this.chainModify(2);
+				move.basePower = 140;
 			}
 		},
 		drain: [1, 2],
@@ -19839,7 +19839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Tough",
 	},
-	magicacid: {			//Might be finished?
+	magicacid: {
 		num: 9005,
 		accuracy: 80,
 		basePower: 110,
@@ -19858,14 +19858,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		ignoreImmunity: {'Poison': true},
 		secondary: {
-			chance: 50,				//Should be 10%
+			chance: 10,
 			status: 'brn',
 		},
 		target: "normal",
 		type: "Poison",
 		contestType: "Smart",
 	},			
-	unstableconcoction: {			//Might be finished? Probably unfinished though
+	unstableconcoction: {			//Not Finished
 		num: 9006,
 		accuracy: 100,
 		basePower: 160,
@@ -19875,8 +19875,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		beforeMoveCallback(pokemon) {
-			if (this.randomChance(1, 2)) {			//Should be this.randomChance(1, 10)
-				this.target = pokemon;
+			if (this.randomChance(1, 1)) {			//Should be this.randomChance(1, 10)
+				move.target = pokemon;
 			}	
 		},
 		secondary: null,
