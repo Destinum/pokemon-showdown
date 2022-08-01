@@ -83279,6 +83279,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			wish: ["8M"],
 			defog: ["8M"],
 			substitute: ["8M"],
+			toxic: ["8M"],
 		},
 	},
 	moosecentaur: {

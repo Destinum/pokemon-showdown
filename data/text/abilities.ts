@@ -1778,4 +1778,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon is immune to Fairy-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Fairy-type move.",
 		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Fairy moves; Fairy immunity.",
 	},
+	charge: {
+		name: "Charge",
+		desc: "Doubles speed during the first turn on the field if using an attacking move.",
+		shortDesc: "Doubles speed during the first turn on the field if using an attacking move.",
+	},
 };

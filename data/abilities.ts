@@ -4597,16 +4597,74 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 9006,
 	},
 	charge: {		//Not finished
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fairy') {
-				if (!this.heal(target.baseMaxhp / 4)) {
-					this.add('-immune', target, '[from] ability: Light Eater');
-				}
-				return null;
+		onModifySpe(spe, pokemon) {
+			if (pokemon.activeMoveActions === 1) {
+				return this.chainModify(2.0);
 			}
 		},
 		name: "Charge",
 		rating: 3.5,
 		num: 9007,
 	},
+		
+	/*quickfeet: {
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Quick Feet",
+		rating: 2.5,
+		num: 95,
+	},
+	sheerforce: {
+		onModifyMove(move, pokemon) {
+			if (move.secondaries) {
+				delete move.secondaries;
+				// Technically not a secondary effect, but it is negated
+				delete move.self;
+				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
+				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
+				move.hasSheerForce = true;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+		},
+		name: "Sheer Force",
+		rating: 3.5,
+		num: 125,
+	},
+	megalauncher: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['pulse']) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Mega Launcher",
+		rating: 3,
+		num: 178,
+	},
+	firstimpression: {
+		num: 660,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "First Impression",
+		pp: 10,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("First Impression only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Cute",
+	},*/
 };

@@ -6911,4 +6911,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] became trapped in darkness!",
 		//activate: "  [POKEMON] became trapped in darkness!",
 	},
+	cavalrylance: {
+		name: "Cavalry Lance",
+		desc: "This move is always a critical hit if the user moves before the target.",
+		shortDesc: "This move is always a critical hit if the user moves before the target.",
+	},
 };
