@@ -19802,7 +19802,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Cool",
 	},
-	witheringgrasp: {			//Not Finished
+	witheringgrasp: {
 		num: 9003,
 		accuracy: 100,
 		basePower: 70,
@@ -19812,68 +19812,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
 		basePowerCallback(source, target, move) {
-			/*if (target.type === 'Water' || target.type === 'Grass') {*/
-			if (target.num === 892) {
+			if (target.hasType('Water') || target.hasType('Grass')) {
 				return move.basePower * 2;
 			}
 			return move.basePower;
 		},
-		/*onBasePower(basePower, pokemon, target) {
-			if (target.type === 'Water' || target.type === 'Grass') {
-				move.basePower = 140;
-			}
-		},*/
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
 		contestType: "Tough",
-	},
-	/*risingvoltage: {
-		num: 804,
-		accuracy: 100,
-		basePower: 70,
-		basePowerCallback(source, target, move) {
-			if (this.field.isTerrain('electricterrain') && target.isGrounded()) {
-				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
-				return move.basePower * 2;
-			}
-			return move.basePower;
-		},
-		category: "Special",
-		name: "Rising Voltage",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		target: "normal",
-		type: "Electric",
-		maxMove: {basePower: 140},
-	},
-	freezedry: {
-		num: 573,
-		accuracy: 100,
-		basePower: 70,
-		category: "Special",
-		name: "Freeze-Dry",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Water') return 1;
-		},
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
-		target: "normal",
-		type: "Ice",
-		contestType: "Beautiful",
-	},*/	
-	
-		
-		
-		
+	},		
 	mercurybomb: {
 		num: 9004,
 		accuracy: 100,
@@ -19927,8 +19876,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			if (this.randomChance(1, 1)) {			//Should be this.randomChance(1, 10)
-				move.target = "self";	
+			if (this.randomChance(1, 1)) {
+				move.target = "self";
+				move.accuracy = true;
+				this.add('damage', pokemon, 'Unstable Concoction');
 				//this.debug("The Unstable Concoction exploded prematurely!");
 			}	
 		},
