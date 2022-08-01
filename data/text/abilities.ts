@@ -1768,4 +1768,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		
 		activate: "  [SOURCE] departed with its fallen foe.",
 	},
+	shadowsbane: {
+		name: "Shadow's Bane",
+		desc: "This Pokemon's Special Attack is raised by 1 stage after it is damaged by a Dark-type move.",
+		shortDesc: "This Pokemon's Special Attack is raised by 1 stage after it is damaged by a Dark-type move.",
+	},
+	lighteater: {
+		name: "Light Eater",
+		desc: "This Pokemon is immune to Fairy-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Fairy-type move.",
+		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Fairy moves; Fairy immunity.",
+	},
 };

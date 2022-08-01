@@ -19918,5 +19918,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Cool",
 	},
+	blackhole: {
+		num: 9009,
+		accuracy: 85,
+		basePower: 50,
+		category: "Special",
+		name: "Black Hole",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Beautiful",
+	},
 		
 };

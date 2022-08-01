@@ -4548,106 +4548,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 9002,
 	},	
-	windsofwar: {			//Unfinished
+	windsofwar: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				source.side.addSideCondition('tailwind');
+				if (!source.side.getSideCondition('tailwind')) {
+					this.add('-activate', source, 'ability: Winds of War');
+					source.side.addSideCondition('tailwind');
+				}
 			}
 		},
 		name: "Winds of War",
 		rating: 4,
 		num: 9003,
-	},		
-	
-	/*screencleaner: {
-		onStart(pokemon) {
-			let activated = false;
-			for (const sideCondition of ['reflect', 'lightscreen', 'auroraveil']) {
-				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
-					if (side.getSideCondition(sideCondition)) {
-						if (!activated) {
-							this.add('-activate', pokemon, 'ability: Screen Cleaner');
-							activated = true;
-						}
-						side.removeSideCondition(sideCondition);
-					}
-				}
-			}
-		},
-		name: "Screen Cleaner",
-		rating: 2,
-		num: 251,
-	},*/
-		
-	/*tailwind: {
-		num: 366,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Tailwind",
-		pp: 15,
-		priority: 0,
-		flags: {snatch: 1},
-		sideCondition: 'tailwind',
-		condition: {
-			duration: 4,
-			durationCallback(target, source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
-					return 6;
-				}
-				return 4;
-			},
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Tailwind');
-			},
-			onModifySpe(spe, pokemon) {
-				return this.chainModify(2);
-			},
-			onSideResidualOrder: 26,
-			onSideResidualSubOrder: 5,
-			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Tailwind');
-			},
-		},
-		secondary: null,
-		target: "allySide",
-		type: "Flying",
-		zMove: {effect: 'crit2'},
-		contestType: "Cool",
-	},
-	
-	
-	moxie: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({atk: length}, source);
-			}
-		},
-		name: "Moxie",
-		rating: 3,
-		num: 153,
-	},
-	grimneigh: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({spa: length}, source);
-			}
-		},
-		name: "Grim Neigh",
-		rating: 3,
-		num: 265,
-	},
-	sandstream: {
-		onStart(source) {
-			this.field.setWeather('sandstorm');
-		},
-		name: "Sand Stream",
-		rating: 4,
-		num: 45,
-	},*/
-		
-		
+	},			
 	envoyoffolkvangr: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
@@ -4658,5 +4571,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Envoy of Folkvangr",
 		rating: 4,
 		num: 9004,
+	},
+	shadowsbane: {
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark') {
+				this.boost({spa: 1});
+			}
+		},
+		name: "Shadow's Bane",
+		rating: 2.5,
+		num: 9005,
+	},
+	waterabsorb: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Light Eater');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Light Eater",
+		rating: 3.5,
+		num: 9006,
 	},
 };

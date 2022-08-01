@@ -6649,5 +6649,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	starlion: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	blackholelion: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };
