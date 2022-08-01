@@ -83303,6 +83303,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			taunt: ["8M"],
 			stealthrock: ["8M"],
 			spikes: ["8M"],
+			battlecry: ["8M"],
 		},
 	},
 	ankylosaurus: {
