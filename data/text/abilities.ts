@@ -1766,6 +1766,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
 		shortDesc: "This pokémon immediately switches out after knocking out an opponent with an attack.",
 		
-		activate: "  [SOURCE] left the battlefield!",
+		activate: "  [SOURCE] departed with its fallen foe.",
 	},
 };

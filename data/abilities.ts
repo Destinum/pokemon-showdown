@@ -4547,9 +4547,79 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hide and Seek",
 		rating: 3.5,
 		num: 9002,
-	},
+	},	
+	windsofwar: {			//Unfinished
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				source.side.addSideCondition('tailwind');
+			}
+		},
+		name: "Winds of War",
+		rating: 4,
+		num: 9003,
+	},		
+	
+	/*screencleaner: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const sideCondition of ['reflect', 'lightscreen', 'auroraveil']) {
+				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
+					if (side.getSideCondition(sideCondition)) {
+						if (!activated) {
+							this.add('-activate', pokemon, 'ability: Screen Cleaner');
+							activated = true;
+						}
+						side.removeSideCondition(sideCondition);
+					}
+				}
+			}
+		},
+		name: "Screen Cleaner",
+		rating: 2,
+		num: 251,
+	},*/
 		
-	/*moxie: {
+	/*tailwind: {
+		num: 366,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Tailwind",
+		pp: 15,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'tailwind',
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 6;
+				}
+				return 4;
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Tailwind');
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Tailwind');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Flying",
+		zMove: {effect: 'crit2'},
+		contestType: "Cool",
+	},
+	
+	
+	moxie: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({atk: length}, source);
@@ -4576,58 +4646,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Sand Stream",
 		rating: 4,
 		num: 45,
-	},
-	emergencyexit: {
-		onEmergencyExit(target) {
-			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
-			for (const side of this.sides) {
-				for (const active of side.active) {
-					active.switchFlag = false;
-				}
-			}
-			target.switchFlag = true;
-			this.add('-activate', target, 'ability: Emergency Exit');
-		},
-		name: "Emergency Exit",
-		rating: 1,
-		num: 194,
-	},
-	wimpout: {
-		onEmergencyExit(target) {
-			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
-			for (const side of this.sides) {
-				for (const active of side.active) {
-					active.switchFlag = false;
-				}
-			}
-			target.switchFlag = true;
-			this.add('-activate', target, 'ability: Wimp Out');
-		},
-		name: "Wimp Out",
-		rating: 1,
-		num: 193,
-	},*/	
+	},*/
 		
 		
-		
-		
-		
-		
-	windsofwar: {			//Unfinished
-		onDamage(damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
-				return false;
-			}
-		},
-		name: "Winds of War",
-		rating: 4,
-		num: 9003,
-	},
-	envoyoffolkvangr: {			//Unfinished
+	envoyoffolkvangr: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				//this.boost({atk: length}, source);
 				source.switchFlag = true;
 				this.add('-activate', source, 'ability: Envoy of Folkvangr');
 			}
