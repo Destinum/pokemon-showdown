@@ -4549,9 +4549,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 9002,
 	},	
 	windsofwar: {			//Unfinished
-		onDamage(damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
 				source.side.addSideCondition('tailwind');
 			}
 		},
