@@ -19928,6 +19928,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		volatileStatus: 'partiallytrapped',
+		onStart(pokemon, source, effect) {
+			this.add('-start', pokemon, 'Black Hole');
+		},	
 		secondary: null,
 		target: "normal",
 		type: "Dark",
