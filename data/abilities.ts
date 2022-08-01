@@ -4582,7 +4582,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2.5,
 		num: 9005,
 	},
-	waterabsorb: {
+	lighteater: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fairy') {
 				if (!this.heal(target.baseMaxhp / 4)) {
