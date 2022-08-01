@@ -83271,6 +83271,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			darkpulse: ["8M"],
 			blackhole: ["8M"],
 			shadowball: ["8M"],
+			flashcannon: ["8M"],
 			recover: ["8M"],
 			lightscreen: ["8M"],
 			reflect: ["8M"],
