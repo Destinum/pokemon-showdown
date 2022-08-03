@@ -6665,5 +6665,73 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	spinosaurus: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	basilosaurus: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	snowyowl: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	thorgoat: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	heroredpanda: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	feydragon: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	flyingboar: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	galeon: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	taraskeon: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	erbeluk: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	manticore: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	desertsparrow: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	aloeveralizard: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	mossmuskox: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	remingail: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	reindeer: {			//Not Added
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	molecricket: {			//Not Added
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 
 };

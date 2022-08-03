@@ -575,6 +575,13 @@ export class Pokemon {
 		}
 		return this.battle.trunc(speed, 13);
 	}
+	getActionSpeedCharge() {							//Added for Fakemon
+		let speed = this.getStat('spe', false, false)*2;
+		if (this.battle.field.getPseudoWeather('trickroom')) {
+			speed = 10000 - speed;
+		}
+		return this.battle.trunc(speed, 13);
+	}
 
 	/* Commented out for now until a use for Combat Power is found in Let's Go
 	getCombatPower() {

@@ -2341,6 +2341,7 @@ export class Battle {
 	}
 
 	getActionSpeed(action: AnyObject) {
+		let isCharging = 0;								//Added for Fakemon	
 		if (action.choice === 'move') {
 			let move = action.move;
 			if (action.zmove) {
@@ -2367,13 +2368,18 @@ export class Battle {
 			// Grassy Glide priority
 			priority = this.singleEvent('ModifyPriority', move, null, action.pokemon, null, null, priority);
 			priority = this.runEvent('ModifyPriority', action.pokemon, null, move, priority);
+			
 			action.priority = priority + action.fractionalPriority;
 			// In Gen 6, Quick Guard blocks moves with artificially enhanced priority.
 			if (this.gen > 5) action.move.priority = priority;
+			
+			isCharging = this.runEvent('ModifyChargeSpe', action.pokemon, move);							//Added for Fakemon
 		}
 
 		if (!action.pokemon) {
 			action.speed = 1;
+		} else if (isCharging === 1) {							//Added for Fakemon
+			action.speed = action.pokemon.getActionSpeedCharge();
 		} else {
 			action.speed = action.pokemon.getActionSpeed();
 		}

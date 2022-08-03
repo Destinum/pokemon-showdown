@@ -4596,163 +4596,35 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 9006,
 	},
-	charge: {		//Not finished
-		/*onPrepareHit(source, target, move) {
-			if (move.category === 'Status') return;	
-		},*/
-		
-		
-		
-		/*onSpecialModifySpe(spe, pokemon, move) {
-			if (move?.category === 'Status') {
-				return this.chainModify(2.0);
+	charge: {					//Changes made in sim/dex-conditions.ts, sim/battle.ts and sim/pokemon.ts
+		onModifyChargeSpe(pokemon, move) {
+			if (move.category === 'Status' || pokemon.activeMoveActions > 0) {
+				return 0;
 			}
-			return this.chainModify(1.0);
-		},*/
-		
-		/*onSpecialModifyAtk(atk, pokemon, move) {
-			/*if (move.category === 'Physical') {
-				return this.chainModify(100.0);
-			}*/
-		//	return this.chainModify(8.0);
-		//},
-		
-		/*onSpecificModifyAtk(atk, attacker, defender, move) {
-			return this.chainModify(8.0);
-		},*/
-		
-		onModifySpe(spe, pokemon) {
-			//const currentMove = this.dex.getActiveMove(move.id);
-			if (pokemon.activeMoveActions === 0) {
-				return this.chainModify(2.0);
-			}
-			return this.chainModify(1.0);
+			return 1;
 		},
 		name: "Charge",
 		rating: 3.5,
 		num: 9007,
 	},
-	//onModifyAtk(atk, attacker, defender, move)
-		
-	/*parentalbond: {
-		onPrepareHit(source, target, move) {
-			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
-			if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
-			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
-				move.multihit = 2;
-				move.multihitType = 'parentalbond';
-			}
-		},
-		// Damage modifier implemented in BattleActions#modifyDamage()
-		onSourceModifySecondaries(secondaries, target, source, move) {
-			if (move.multihitType === 'parentalbond' && move.id === 'secretpower' && move.hit < 2) {
-				// hack to prevent accidentally suppressing King's Rock/Razor Fang
-				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
-			}
-		},
-		name: "Parental Bond",
-		rating: 4.5,
-		num: 185,
-	},
-	prankster: {
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.category === 'Status') {
-				move.pranksterBoosted = true;
-				return priority + 1;
-			}
-		},
-		name: "Prankster",
-		rating: 4,
-		num: 158,
-	},
-	magicbounce: {
-		name: "Magic Bounce",
-		onTryHitPriority: 1,
-		onTryHit(target, source, move) {
-			if (target === source || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
-			const newMove = this.dex.getActiveMove(move.id);
-			newMove.hasBounced = true;
-			newMove.pranksterBoosted = false;
-			this.actions.useMove(newMove, target, source);
-			return null;
-		},
-		onAllyTryHitSide(target, source, move) {
-			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
-			const newMove = this.dex.getActiveMove(move.id);
-			newMove.hasBounced = true;
-			newMove.pranksterBoosted = false;
-			this.actions.useMove(newMove, this.effectState.target, source);
-			return null;
-		},
-		condition: {
-			duration: 1,
-		},
-		isBreakable: true,
-		rating: 4,
-		num: 156,
-	},
-	quickfeet: {
-		onModifySpe(spe, pokemon) {
-			if (pokemon.status) {
+	amphibious: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Amphibious boost');
 				return this.chainModify(1.5);
 			}
 		},
-		name: "Quick Feet",
-		rating: 2.5,
-		num: 95,
-	},
-	sheerforce: {
-		onModifyMove(move, pokemon) {
-			if (move.secondaries) {
-				delete move.secondaries;
-				// Technically not a secondary effect, but it is negated
-				delete move.self;
-				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
-				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
-				move.hasSheerForce = true;
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Amphibious boost');
+				return this.chainModify(1.5);
 			}
 		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
-		},
-		name: "Sheer Force",
+		name: "Amphibious",
 		rating: 3.5,
-		num: 125,
+		num: 9008,
 	},
-	megalauncher: {
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['pulse']) {
-				return this.chainModify(1.5);
-			}
-		},
-		name: "Mega Launcher",
-		rating: 3,
-		num: 178,
-	},
-	firstimpression: {
-		num: 660,
-		accuracy: 100,
-		basePower: 90,
-		category: "Physical",
-		name: "First Impression",
-		pp: 10,
-		priority: 2,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onTry(source) {
-			if (source.activeMoveActions > 1) {
-				this.hint("First Impression only works on your first turn out.");
-				return false;
-			}
-		},
-		secondary: null,
-		target: "normal",
-		type: "Bug",
-		contestType: "Cute",
-	},*/
+		
 };

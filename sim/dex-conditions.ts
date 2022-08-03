@@ -62,9 +62,7 @@ export interface EventMethods {
 	onModifySpA?: CommonHandlers['ModifierSourceMove'];
 	onModifySpD?: CommonHandlers['ModifierMove'];
 	onModifySpe?: (this: Battle, spe: number, pokemon: Pokemon) => number | void;
-	onSpecialModifySpe?: (this: Battle, spe: number, pokemon: Pokemon, move: ActiveMove) => number | void;		//Added for Fakemon
-	onSpecialModifyAtk?: (this: Battle, atk: number, pokemon: Pokemon, move: ActiveMove) => number | void;		//Added for Fakemon
-	onSpecificModifyAtk?: CommonHandlers['ModifierSourceMove'];													//Added for Fakemon
+	onModifyChargeSpe?: CommonHandlers['ModifierSourceMove'];														//Added for Fakemon
 	onModifyWeight?: (this: Battle, weighthg: number, pokemon: Pokemon) => number | void;
 	onMoveAborted?: CommonHandlers['VoidMove'];
 	onNegateImmunity?: ((this: Battle, pokemon: Pokemon, type: string) => boolean | void) | boolean;
