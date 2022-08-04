@@ -17855,7 +17855,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Thoar Goat",
 		types: ["Electric", "Fighting"],
 		baseStats: {hp: 80, atk: 130, def: 100, spa: 70, spd: 70, spe: 90},
-		abilities: {0: "Lightning Rod", 1: "Soundproof", H: "Motor Drive"},a
+		abilities: {0: "Lightning Rod", 1: "Soundproof", H: "Motor Drive"},
 		heightm: 5.0,
 		weightkg: 600,
 		color: "Green",
