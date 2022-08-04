@@ -20113,12 +20113,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		
 //Start of other people's Fakemon Moves
 	
-	gun: {
+	gunshot: {
 		num: 10001,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Special",
-		name: "Gun",
+		name: "Gunshot",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

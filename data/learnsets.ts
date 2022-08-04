@@ -83999,7 +83999,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	
 	gun: {	//Created by Woopy
 		learnset: {
-            gun: ["8M"],
+            gunshot: ["8M"],
 			watergun: ["8M"],
 			snipeshot: ["8M"],
 			flashcannon: ["8M"],

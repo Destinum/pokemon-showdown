@@ -6939,8 +6939,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	
 //Start of other people's Fakemon Moves
 	
-	gun: {
-		name: "Gun",
+	gunshot: {
+		name: "Gunshot",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
 	},

@@ -4706,17 +4706,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Shoot Down",
 		rating: 0,
 		num: 10001,
-	},	
-	toughclaws: {
-		onBasePowerPriority: 21,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['contact']) {
-				return this.chainModify([5325, 4096]);
-			}
-		},
-		name: "Tough Claws",
-		rating: 3.5,
-		num: 181,
 	},
 		
 };
