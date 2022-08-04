@@ -6744,5 +6744,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	reactivemonk: {		//Created by Athyestic
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 	
 };

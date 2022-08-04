@@ -18032,4 +18032,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
+	reactivemonk: {		//Created by Athyestic
+		num: 5203,
+		name: "Reactive Monk",
+		types: ["Fighting", "Psychic"],
+		baseStats: {hp: 80, atk: 120, def: 110, spa: 71, spd: 90, spe: 26},
+		abilities: {0: "Analytic", 1: "Steadfast", H: "Inner Focus"},
+		heightm: 5.0,
+		weightkg: 600,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 };
