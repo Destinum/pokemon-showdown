@@ -4493,7 +4493,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -4,
 	},
 	
-// Start of Fakemon Abilities
+// Start of my Fakemon Abilities
 		
 	resilient: {
 		onDamage(damage, target, source, effect) {
@@ -4504,7 +4504,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Resilient",
 		rating: 4,
-		num: 9000,
+		num: 9001,
 	},	
 	nobleradiance: {
 		onStart(pokemon) {
@@ -4519,7 +4519,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Noble Radiance",
 		rating: 3.5,
-		num: 9001,
+		num: 9002,
 	},
 	hideandseek: {
 		onStart(pokemon) {
@@ -4549,7 +4549,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Hide and Seek",
 		rating: 3.5,
-		num: 9002,
+		num: 9003,
 	},	
 	windsofwar: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -4562,7 +4562,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Winds of War",
 		rating: 4,
-		num: 9003,
+		num: 9004,
 	},			
 	envoyoffolkvangr: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -4573,7 +4573,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Envoy of Folkvangr",
 		rating: 4,
-		num: 9004,
+		num: 9005,
 	},
 	shadowsbane: {
 		onDamagingHit(damage, target, source, move) {
@@ -4583,7 +4583,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Shadow's Bane",
 		rating: 2.5,
-		num: 9005,
+		num: 9006,
 	},
 	lighteater: {
 		onTryHit(target, source, move) {
@@ -4597,7 +4597,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isBreakable: true,
 		name: "Light Eater",
 		rating: 3.5,
-		num: 9006,
+		num: 9007,
 	},
 	charge: {					//Changes made in sim/dex-conditions.ts, sim/battle.ts and sim/pokemon.ts
 		onModifyChargeSpe(pokemon, move) {
@@ -4608,7 +4608,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Charge",
 		rating: 3.5,
-		num: 9007,
+		num: 9008,
 	},
 	amphibious: {
 		onModifyAtkPriority: 5,
@@ -4627,7 +4627,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Amphibious",
 		rating: 3.5,
-		num: 9008,
+		num: 9009,
 	},
 	snowcover: {
 		onDamage(damage, target, source, effect) {
@@ -4664,7 +4664,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Snow Cover",
 		rating: 0,
-		num: 9009,
+		num: 9010,
 	},	
 	wintersblessing: {
 		name: "Winter's Blessing",
@@ -4686,11 +4686,37 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		rating: 1.5,
-		num: 9010,
+		num: 9011,
 	},	
 	tunneler: {			//Not Finished
 		name: "Tunneler",
 		rating: 0,
-		num: 9011,
+		num: 9012,
 	},	
+		
+//Start of other people's Fakemon Abilities
+	
+	shootdown: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (!move.flags['contact']) {
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Shoot Down",
+		rating: 0,
+		num: 10001,
+	},	
+	toughclaws: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['contact']) {
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Tough Claws",
+		rating: 3.5,
+		num: 181,
+	},
+		
 };

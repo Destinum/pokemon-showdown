@@ -6611,7 +6611,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 
-//Start of Fakemons
+//Start of my Fakemons
 
     emperoc: {
 		tier: "PU",
@@ -6721,7 +6721,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
-	remingail: {
+	remingail: {	//Co-created with Woopy
 		tier: "PU",
 		doublesTier: "DUU",
 	},
@@ -6733,5 +6733,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	
+//Start of other people's Fakemons
 
+	gun: {	//Created by Woopy
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	krafkabog: {	//Created by Eeluim
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	
 };

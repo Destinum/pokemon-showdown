@@ -6855,7 +6855,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 	},
 	
-	// Fakemon moves
+//start of my Fakemon Moves
 	
 	aridgale: {
 		name: "Arid Gale",
@@ -6935,5 +6935,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Tillage",
 		desc: "(Not implemented properly) If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
 		shortDesc: "(Not implemented properly) If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
+	},
+	
+//Start of other people's Fakemon Moves
+	
+	gun: {
+		name: "Gun",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
 	},
 };

@@ -83032,7 +83032,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 		],
 	},
 
-//Start of Fakemons
+//Start of my Fakemons
 
 	emperoc: {
 		learnset: {
@@ -83926,7 +83926,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			leechseed: ["8M"],
 		},
 	},
-	remingail: {
+	remingail: {	//Co-created with Woopy
 		learnset: {
             protect: ["8M"],
 			rest: ["8M"],
@@ -83994,4 +83994,50 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sing: ["8M"],
 		},
 	},
+	
+	//Start of other people's Fakemons
+	
+	gun: {	//Created by Woopy
+		learnset: {
+            gun: ["8M"],
+			watergun: ["8M"],
+			snipeshot: ["8M"],
+			flashcannon: ["8M"],
+			icebeam: ["8M"],
+			flamethrower: ["8M"],
+			hyperbeam: ["8M"],
+			slam: ["8M"],
+			bulletseed: ["8M"],
+			energyball: ["8M"],
+			shadowball: ["8M"],
+			aurasphere: ["8M"],
+			barrage: ["8M"],
+			zapcannon: ["8M"],
+		},
+	},
+	krafkabog: {	//Created by Eeluim
+		learnset: {
+            protect: ["8M"],
+			rest: ["8M"],
+			sleeptalk: ["8M"],
+			substitute: ["8M"],
+			drillrun: ["8M"],
+			highhorsepower: ["8M"],
+			spikes: ["8M"],
+			stealthrock: ["8M"],
+			clearsmog: ["8M"],
+			gunkshot: ["8M"],
+			sludgebomb: ["8M"],
+			flipturn: ["8M"],
+			trickroom: ["8M"],
+			liquidation: ["8M"],
+			heavyslam: ["8M"],
+			earthquake: ["8M"],
+			crunch: ["8M"],
+			slackoff: ["8M"],
+			curse: ["8M"],
+		},
+	},
+
+
 };

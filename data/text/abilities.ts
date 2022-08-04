@@ -1737,7 +1737,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
 	
-	// Fakemon
+//Start of my Fakemon Abilities
 	
 	resilient: {
 		name: "Resilient",
@@ -1803,4 +1803,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "(Not implemented properly) Attack and special attack are doubled while in the semi-invulnerable state from Burrow or Dig.",
 		shortDesc: "(Not implemented properly) Attack and special attack are doubled while in the semi-invulnerable state from Burrow or Dig.",
 	},
+
+//Start of other people's Fakemon Abilities
+	
+	shootdown: {
+		name: "Shoot Down",
+		desc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
+		shortDesc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
+	},
+	
+	
 };

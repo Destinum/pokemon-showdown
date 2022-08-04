@@ -19743,10 +19743,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 		
 		
-// Start of Fakemon Moves
+// Start of my Fakemon Moves
 
 	aridgale: {
-		num: 9000,
+		num: 9001,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -19767,7 +19767,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	frigidgale: {
-		num: 9001,
+		num: 9002,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
@@ -19788,7 +19788,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	icebreaker: {
-		num: 9002,
+		num: 9003,
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
@@ -19803,7 +19803,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	witheringgrasp: {
-		num: 9003,
+		num: 9004,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
@@ -19824,7 +19824,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},		
 	mercurybomb: {
-		num: 9004,
+		num: 9005,
 		accuracy: 100,
 		basePower: 90,
 		category: "Special",
@@ -19841,7 +19841,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	magicacid: {
-		num: 9005,
+		num: 9006,
 		accuracy: 80,
 		basePower: 110,
 		category: "Special",
@@ -19867,7 +19867,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Smart",
 	},			
 	unstableconcoction: {
-		num: 9006,
+		num: 9007,
 		accuracy: 100,
 		basePower: 160,
 		category: "Special",
@@ -19888,7 +19888,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Smart",
 	},			
 	lastbreath: {
-		num: 9007,
+		num: 9008,
 		accuracy: 90,
 		basePower: 150,
 		category: "Special",
@@ -19905,7 +19905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	battlecry: {
-		num: 9008,
+		num: 9009,
 		accuracy: 100,
 		basePower: 90,
 		category: "Special",
@@ -19919,7 +19919,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	blackhole: {		//Referenced in src/battle-animations.ts and src/battle-text-parser.ts on the client side.
-		num: 9009,
+		num: 9010,
 		accuracy: 85,
 		basePower: 50,
 		category: "Special",
@@ -19934,7 +19934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	cavalrylance: {
-		num: 9010,
+		num: 9011,
 		accuracy: 100,
 		basePower: 85,
 		basePowerCallback(pokemon, target, move) {
@@ -19956,7 +19956,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 	},
 	thunderhammer: {
-		num: 9011,
+		num: 9012,
 		accuracy: 85,
 		basePower: 120,
 		category: "Physical",
@@ -19973,7 +19973,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	subzerojolt: {
-		num: 9012,
+		num: 9013,
 		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
@@ -19990,7 +19990,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	Burrow: {			//Not Finished
-		num: 9013,
+		num: 9014,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -20097,7 +20097,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		
 		
 	tillage: {			//Not Finished
-		num: 9014,
+		num: 9015,
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
@@ -20111,4 +20111,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 		
+//Start of other people's Fakemon Moves
+	
+	gun: {
+		num: 10001,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Gun",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+	},
 };

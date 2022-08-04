@@ -17669,7 +17669,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 
 
-//Start of Fakemons
+//Start of my Fakemons
 
 
     emperoc: {
@@ -17974,7 +17974,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
-	remingail: {
+	remingail: {	//Co-created with Woopy
 		num: 4228,
 		name: "Remingail",
 		types: ["Electric", "Ice"],
@@ -18002,6 +18002,31 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Bug", "Ground"],
 		baseStats: {hp: 70, atk: 100, def: 75, spa: 65, spd: 75, spe: 90},
 		abilities: {0: "Tunneler"},
+		heightm: 5.0,
+		weightkg: 600,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	
+	//Start of other people's Fakemons
+	
+	gun: {	//Created by Woopy
+		num: 5201,
+		name: "Gun",
+		types: ["Steel"],
+		baseStats: {hp: 40, atk: 80, def: 70, spa: 130, spd: 60, spe: 105},
+		abilities: {0: "Shoot Down"},
+		heightm: 5.0,
+		weightkg: 600,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	krafkabog: {	//Created by Eeluim
+		num: 5202,
+		name: "Krafkabog",
+		types: ["Poison", "Ground"],
+		baseStats: {hp: 103, atk: 127, def: 67, spa: 83, spd: 131, spe: 59},
+		abilities: {0: "Beast Boost"},
 		heightm: 5.0,
 		weightkg: 600,
 		color: "Green",
