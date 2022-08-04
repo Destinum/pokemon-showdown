@@ -1783,4 +1783,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Doubles speed during the first turn on the field if using an attacking move.",
 		shortDesc: "Doubles speed during the first turn on the field if using an attacking move.",
 	},
+	amphibious: {
+		name: "Amphibious",
+		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+	},
 };

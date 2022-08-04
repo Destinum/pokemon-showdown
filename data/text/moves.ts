@@ -6916,4 +6916,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move is always a critical hit if the user moves before the target.",
 		shortDesc: "This move is always a critical hit if the user moves before the target.",
 	},
+	thunderhammer: {
+		name: "Thunder Hammer",
+		desc: "Has a 30% chance to paralyze the target.",
+		shortDesc: "Has a 30% chance to paralyze the target.",
+	},
+	subzerojolt: {
+		name: "Subzero Jolt",
+		desc: "Has a 10% chance to freeze the target.",
+		shortDesc: "Has a 10% chance to freeze the target.",
+	},
 };

@@ -17931,7 +17931,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	manticore: {
-		num: 4223,
+		num: 4224,
 		name: "Manticore",
 		types: ["Poison", "Fire"],
 		baseStats: {hp: 90, atk: 120, def: 75, spa: 80, spd: 75, spe: 100},
