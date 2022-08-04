@@ -1788,4 +1788,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
 	},
+	snowcover: {
+		name: "Snow Cover",
+		desc: "On switch in, this pokémon is unaffected by and clears hazards on its side of the field if it is Hailing.",
+		shortDesc: "On switch in, this pokémon is unaffected by and clears hazards on its side of the field if it is Hailing.",
+	},
+	wintersblessing: {
+		name: "Winter's Blessing",
+		desc: "At the end of each turn, cures adjacent allies of non-volatile status conditions if it is Hailing. Also protects them from taking damage due to Hail.",
+		shortDesc: "At the end of each turn, cures adjacent allies of non-volatile status conditions if it is Hailing. Also protects them from taking damage due to Hail.",
+	},
+	tunneler: {
+		name: "Tunneler",
+		desc: "(Not implemented properly) Attack and special attack are doubled while in the semi-invulnerable state from Burrow or Dig.",
+		shortDesc: "(Not implemented properly) Attack and special attack are doubled while in the semi-invulnerable state from Burrow or Dig.",
+	},
 };

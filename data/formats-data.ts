@@ -6725,11 +6725,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
-	reindeer: {			//Not Added
+	reindeer: {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
-	molecricket: {			//Not Added
+	molecricket: {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
