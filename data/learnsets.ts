@@ -83282,6 +83282,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: ["8M"],
 			calmmind: ["8M"],
 			sludgebomb: ["8M"],
+			trickroom: ["8M"],
 		},
 	},
 	moosecentaur: {
