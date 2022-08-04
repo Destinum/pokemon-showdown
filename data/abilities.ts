@@ -3127,6 +3127,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 245,
 	},
 	sandstream: {
+		onImmunity(type, pokemon) {			//Added for Fakemon
+			if (type === 'sandstorm') return false;
+		},
 		onStart(source) {
 			this.field.setWeather('sandstorm');
 		},
