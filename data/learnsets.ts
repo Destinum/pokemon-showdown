@@ -83996,7 +83996,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 		},
 	},
 	
-	//Start of other people's Fakemons
+//Start of other people's Fakemons
 	
 	gun: {	//Created by Woopy
 		learnset: {
@@ -84054,6 +84054,11 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			focuspunch: ["8M"],
 			avalanche: ["8M"],
 			assurance: ["8M"],
+			rockslide: ["8M"],
+			icepunch: ["8M"],
+			firepunch: ["8M"],
+			thunderpunch: ["8M"],
+			teleport: ["8M"],
 		},
 	},
 
