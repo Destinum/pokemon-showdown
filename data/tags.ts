@@ -322,4 +322,11 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Max PP",
 		moveNumCol: move => move.pp,
 	},
+
+//Fakemon Tiers
+	
+	fakemon: {
+		name: "Fakemon",
+		speciesFilter: species => species.tier === 'Fakemon',
+	},
 };

@@ -6614,134 +6614,134 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 //Start of my Fakemons
 
     emperoc: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	grassstarter: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	firestarter: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	waterstarter: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	sundragon: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	burningtree: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	spookypebbles: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	mercuryalchemist: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	valkyriealicorn: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	starlion: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	blackholelion: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	moosecentaur: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	ankylosaurus: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	spinosaurus: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	basilosaurus: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	snowyowl: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	thorgoat: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	heroredpanda: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	feydragon: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	flyingboar: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	galeon: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	taraskeon: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	erbeluk: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	manticore: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	desertsparrow: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	aloeveralizard: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	mossmuskox: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	remingail: {	//Co-created with Woopy
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	reindeer: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	molecricket: {
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	
 //Start of other people's Fakemons
 
 	gun: {	//Created by Woopy
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	krafkabog: {	//Created by Eeluim
-		tier: "PU",
+		tier: "Fakemon",
 		doublesTier: "DUU",
 	},
 	reactivemonk: {		//Created by Athyestic
