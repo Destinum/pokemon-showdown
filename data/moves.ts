@@ -20096,7 +20096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		
 		
 		
-	tillage: {			//Not Finished
+	tillage: {
 		num: 9015,
 		accuracy: 100,
 		basePower: 90,
@@ -20105,114 +20105,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onModifyType(move, pokemon) {
-			if (!pokemon.isGrounded()) return;
+		basePowerCallback(source, target, move) {
+			if (this.field.isTerrain('psychicterrain')) {
+				move.overrideDefensiveStat = 'spd';
+				return move.basePower*1.5;
+			}
+			return move.basePower;
+		},
+		onHit(target, source, move) {
 			switch (this.field.terrain) {
 			case 'electricterrain':
-				move.secondary = {chance: 100, status: 'par'};
+				target.trySetStatus('par', source);
 				break;
 			case 'grassyterrain':
-				move.type = 'Grass';
+				this.heal(source.maxhp / 2, source, source, move);
 				break;
 			case 'mistyterrain':
-				move.type = 'Fairy';
-				break;
-			case 'psychicterrain':
-				move.type = 'Psychic';
+				const allies = [...source.side.pokemon, ...source.side.allySide?.pokemon || []];
+				for (const ally of allies) {
+					ally.cureStatus();
+				}
 				break;
 			}
-		},
-		onHit() {
 			this.field.clearTerrain();
 		},
 		onAfterSubDamage() {
 			this.field.clearTerrain();
 		},
-		heal: [0, 2],
+		//heal: [0, 2],
 		secondary: null,
 		target: "normal",
 		type: "Ground",
 		contestType: "Cool",
 	},
-	
-	/*
-	recover: {
-		num: 105,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Recover",
-		pp: 10,
-		priority: 0,
-		flags: {snatch: 1, heal: 1},
-		heal: [1, 2],
-		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Clever",
-	},
-	
-	
-	steelroller: {
-		num: 798,
-		accuracy: 100,
-		basePower: 130,
-		category: "Physical",
-		name: "Steel Roller",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onTry() {
-			return !this.field.isTerrain('');
-		},
-		onHit() {
-			this.field.clearTerrain();
-		},
-		onAfterSubDamage() {
-			this.field.clearTerrain();
-		},
-		secondary: null,
-		target: "normal",
-		type: "Steel",
-	},
-	terrainpulse: {
-		num: 805,
-		accuracy: 100,
-		basePower: 50,
-		category: "Special",
-		name: "Terrain Pulse",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, pulse: 1},
-		onModifyType(move, pokemon) {
-			if (!pokemon.isGrounded()) return;
-			switch (this.field.terrain) {
-			case 'electricterrain':
-				move.type = 'Electric';
-				break;
-			case 'grassyterrain':
-				move.type = 'Grass';
-				break;
-			case 'mistyterrain':
-				move.type = 'Fairy';
-				break;
-			case 'psychicterrain':
-				move.type = 'Psychic';
-				break;
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (this.field.terrain && pokemon.isGrounded()) {
-				move.basePower *= 2;
-			}
-		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		zMove: {basePower: 160},
-		maxMove: {basePower: 130},
-	},*/
 		
 //Start of other people's Fakemon Moves
 	

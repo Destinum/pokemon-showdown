@@ -6933,8 +6933,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tillage: {
 		name: "Tillage",
-		desc: "(Not implemented properly) If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
-		shortDesc: "(Not implemented properly) If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
+		desc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
+		shortDesc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. ",
 	},
 	
 //Start of other people's Fakemon Moves
