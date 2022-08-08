@@ -20029,6 +20029,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onModifyMove(move, pokemon) {
 				pokemon.removeVolatile('burrow');
+				this.add('-end', pokemon, 'move: Burrow', '[silent]');
 			}
 			/*onAfterHit(target, pokemon) {
 				pokemon.removeVolatile('burrow');
