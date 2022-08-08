@@ -19989,7 +19989,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
-	burrow: {			//Not Finished
+	burrow: {		//Referenced in src/battle-animations.ts on the client side.			//Not Finished
 		num: 9014,
 		accuracy: true,
 		basePower: 0,
@@ -20004,8 +20004,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},*/
+		volatileStatus: 'burrow',
 		condition: {
-			duration: 20,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Burrow');
+			},
+			//duration: 20,
 			onImmunity(type, pokemon) {
 				if (type === 'sandstorm' || type === 'hail') return false;
 			},
@@ -20022,12 +20026,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {nonsky: 1},
 		secondary: null,
-		target: "allySide",
+		//target: "allySide",
+		target: "self",
 		type: "Ground",
 		contestType: "Cool",
 	},
 		
 	/*
+	aquaring: {
+		num: 392,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Aqua Ring",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'aquaring',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Aqua Ring');
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 16);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+	},
+	
 	dig: {
 		num: 91,
 		accuracy: 100,
