@@ -20019,6 +20019,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				return false;
 			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' || move.flags['charge']) {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
 		},
 		category: "Status",
 		name: "Burrow",
