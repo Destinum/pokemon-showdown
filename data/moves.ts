@@ -20123,11 +20123,72 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTry(source, target, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Volcalumin' && pokemon.transformed) {
+				return null;
+			}
+			return;
+		},
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Volcalumin' && !pokemon.transformed) {
+				const volcaluminForme = pokemon.species.id === 'volcaluminigneous' ? '' : '-Igneous';
+				pokemon.formeChange('Volcalumin' + volcaluminForme, this.effect, false, '[msg]');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
 		contestType: "Tough",
 	},
+	
+	/*
+	relicsong: {
+		num: 547,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		isNonstandard: "Past",
+		name: "Relic Song",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 10,
+			status: 'slp',
+		},
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Meloetta' && !pokemon.transformed) {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.willChangeForme) {
+				const meloettaForme = pokemon.species.id === 'meloettapirouette' ? '' : '-Pirouette';
+				pokemon.formeChange('Meloetta' + meloettaForme, this.effect, false, '[msg]');
+			}
+		},
+		target: "allAdjacentFoes",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
+	*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	stormbreaker: {		//Not Finished
 		num: 10003,
 		accuracy: 95,

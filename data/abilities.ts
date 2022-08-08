@@ -4713,5 +4713,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 10001,
 	},
+	hallucination: {
+		name: "Hallucination",
+		rating: 0,
+		num: 10002,
+	},
+	Volcanic Fire: {
+		name: "Volcanic Fire",
+		rating: 0,
+		num: 10002,
+	},
 		
 };

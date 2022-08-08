@@ -6946,6 +6946,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
 	},
+	magmaburst: {
+		name: "Magma Burst",
+		desc: "Raises the user's Defense and Special Defense by 1 stage and transforms Volcalumin into its Igneus Forme. Fails if used by Volcalumin in its Igneus Forme.",
+		shortDesc: "Raises the user's Defense and Special Defense by 1 stage and transforms Volcalumin into its Igneus Forme. Fails if used by Volcalumin in its Igneus Forme.",
+		
+		end: "The concentrated winds were released into the surrounding air instead!",
+	},
 	stormbreaker: {
 		name: "Stormbreaker",
 		desc: "Power is increased by 50% during Rain. If this move fails to hit the target, it ends any current weather conditions.",
