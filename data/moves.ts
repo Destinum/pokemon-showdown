@@ -20141,7 +20141,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		onMoveFail(target, source, move) {
-			this.add('-failed', source, 'Stormbreaker');
+			this.add('-end', source, 'Stormbreaker');
 			this.field.clearWeather();
 		},
 		category: "Physical",

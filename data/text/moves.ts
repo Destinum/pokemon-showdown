@@ -6951,6 +6951,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is increased by 50% during Rain. If this move fails to hit the target, it ends any current weather conditions.",
 		shortDesc: "Power is increased by 50% during Rain. If this move fails to hit the target, it ends any current weather conditions.",
 		
-		failed: "The concentrated winds were released into the surrounding air instead!",
+		end: "The concentrated winds were released into the surrounding air instead!",
 	},
 };
