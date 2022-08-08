@@ -1800,8 +1800,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tunneler: {
 		name: "Tunneler",
-		desc: "All moves have their power doubled while the user is in the semi-invulnerable state from Burrow or Dig.",
-		shortDesc: "All moves have their power doubled while the user is in the semi-invulnerable state from Burrow or Dig.",
+		desc: "All moves have their power doubled while the user is in the semi-invulnerable state of Burrow or Dig.",
+		shortDesc: "All moves have their power doubled while the user is in the semi-invulnerable state of Burrow or Dig.",
 	},
 
 //Start of other people's Fakemon Abilities
