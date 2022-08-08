@@ -19950,7 +19950,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cavalry Lance",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -19989,22 +19989,91 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
-	Burrow: {			//Not Finished
+	burrow: {			//Not Finished
 		num: 9014,
 		accuracy: true,
 		basePower: 0,
+		/*onTryMove(attacker, defender, move) {
+			/*if (attacker.removeVolatile(move.id)) {
+				return;
+			}*/
+			/*this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},*/
+		condition: {
+			//duration: 2,
+			onImmunity(type, pokemon) {
+				if (type === 'sandstorm' || type === 'hail') return false;
+			},
+			onInvulnerability(target, source, move) {
+				if (['earthquake', 'magnitude', 'fissure'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+		},
 		category: "Status",
 		name: "Burrow",
 		pp: 15,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {nonsky: 1},
 		secondary: null,
 		target: "allySide",
-		type: "Fighting",
+		type: "Ground",
 		contestType: "Cool",
 	},
 		
-	/*rapidspin: {
+	/*
+	dig: {
+		num: 91,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Dig",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onImmunity(type, pokemon) {
+				if (type === 'sandstorm' || type === 'hail') return false;
+			},
+			onInvulnerability(target, source, move) {
+				if (['earthquake', 'magnitude'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'earthquake' || move.id === 'magnitude') {
+					return this.chainModify(2);
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		contestType: "Tough",
+	},
+	
+	
+	/*
+	rapidspin: {
 		num: 229,
 		accuracy: 100,
 		basePower: 50,
@@ -20100,11 +20169,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 9015,
 		accuracy: 100,
 		basePower: 90,
-		category: "Physical",
-		name: "Tillage",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
 		basePowerCallback(source, target, move) {
 			if (this.field.isTerrain('psychicterrain')) {
 				move.overrideDefensiveStat = 'spd';
@@ -20130,9 +20194,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.field.clearTerrain();
 		},
 		onAfterSubDamage() {
+			switch (this.field.terrain) {
+			case 'grassyterrain':
+				this.heal(source.maxhp / 2, source, source, move);
+				break;
+			case 'mistyterrain':
+				const allies = [...source.side.pokemon, ...source.side.allySide?.pokemon || []];
+				for (const ally of allies) {
+					ally.cureStatus();
+				}
+				break;
+			}
 			this.field.clearTerrain();
 		},
-		//heal: [0, 2],
+		category: "Physical",
+		name: "Tillage",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Ground",

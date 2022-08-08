@@ -6928,8 +6928,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	burrow: {
 		name: "Burrow",
-		desc: "(Not implemented properly) Clears entry hazards on the users side of the field and puts the user in a semi-invulnerable state until they use their next move.",
-		shortDesc: "(Not implemented properly) Clears entry hazards on the users side of the field and puts the user in a semi-invulnerable state until they use their next move.",
+		desc: "(Not implemented properly) Clears entry hazards on the user's side of the field and puts it in a semi-invulnerable state. Lasts until another move is used, and status moves can't be used while burrowed.",
+		shortDesc: "(Not implemented properly) Clears entry hazards on the user's side of the field and puts it in a semi-invulnerable state. Lasts until another move is used, and status moves can't be used while burrowed.",
+		
+		prepare: "Scattering soil around itself, [POKEMON] burrowed under ground!",
 	},
 	tillage: {
 		name: "Tillage",
