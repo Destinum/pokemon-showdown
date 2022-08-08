@@ -20028,7 +20028,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onModifyMove(move, pokemon) {
-				runPrepareAnim('burrow', pokemon, pokemon);
+				//runPrepareAnim('burrow', pokemon, pokemon);
 				pokemon.removeVolatile('burrow');
 				this.add('-end', pokemon, 'move: Burrow', '[silent]');
 			}
