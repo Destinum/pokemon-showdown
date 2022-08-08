@@ -4729,8 +4729,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		/*onEnd(pokemon) {
-			pokemon.removeVolatile('volcanicfire');*/
-		},
+			pokemon.removeVolatile('volcanicfire');
+		},*/
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart(target) {
