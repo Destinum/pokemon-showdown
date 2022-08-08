@@ -20123,20 +20123,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onTry(source, target, move) {
-			if (pokemon.species.id === 'volcaluminigneous') {
+		onTry(source) {
+			if (source.species.id === 'volcaluminigneous') {
+				//this.attrLastMove('[still]');
+				this.add('-fail', source, 'move: Magma Burst');
 				return null;
 			}
 			return;
 		},
-		boosts: {
-			def: 1,
-			spd: 1,
+		self: {
+			boosts: {
+				def: 1,
+				spd: 1,
+			},
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (pokemon.species.id === 'volcalumin' && !pokemon.transformed) {
+			if (pokemon.species.id === 'volcalumin') {
 				//const volcaluminForme = pokemon.species.id === 'volcaluminigneous' ? '' : '-Igneous';
-				//pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
+				pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
 			}
 		},
 		secondary: null,
