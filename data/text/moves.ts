@@ -6936,7 +6936,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	tillage: {
 		name: "Tillage",
 		desc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. Electric Terrain: The target is paralyzed. Grassy Terrain: The user restored 50% of its max HP. Misty Terrain: Every pokémon in the user's party is cured of any non-volatile status condition. Psychic Terrain: Power is increased by 50% and the target’s special defense is used for damage calculation rather than its defense.",
-		shortDesc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared.",
+		shortDesc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. Electric Terrain: The target is paralyzed. Grassy Terrain: The user restored 50% of its max HP. Misty Terrain: Every pokémon in the user's party is cured of any non-volatile status condition. Psychic Terrain: Power is increased by 50% and the target’s special defense is used for damage calculation rather than its defense.",
 	},
 	
 //Start of other people's Fakemon Moves
