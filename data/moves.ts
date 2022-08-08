@@ -20114,4 +20114,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Tough",
 	},
+	magmaburst: {		//Not Finished
+		num: 10002,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Magma Burst",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+	},
+	stormbreaker: {		//Not Finished
+		num: 10003,
+		accuracy: 95,
+		basePower: 90,
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'raindance':
+			case 'primordialsea':
+				move.basePower = move.basePower*1.5;
+				break;
+			}
+		},
+		category: "Physical",
+		name: "Stormbreaker",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Tough",
+	},
 };

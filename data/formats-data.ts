@@ -6748,5 +6748,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	waratosk: {		//Created by Standardbandard
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	volcalumin: {		//Created by Standardbandard
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	setempest: {		//Created by Standardbandard
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 	
 };
