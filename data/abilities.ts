@@ -4689,6 +4689,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 9011,
 	},	
 	tunneler: {			//Not Finished
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.volatiles['burrow']) {
+				this.debug('Tunneler boost');
+				return this.chainModify(2.0);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (attacker.volatiles['burrow']) {
+				this.debug('Tunneler boost');
+				return this.chainModify(2.0);
+			}
+		},
 		name: "Tunneler",
 		rating: 0,
 		num: 9012,
