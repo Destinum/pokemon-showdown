@@ -6756,6 +6756,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	volcaluminigneous: {		//Created by Standardbandard
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 	setempest: {		//Created by Standardbandard
 		tier: "PU",
 		doublesTier: "DUU",
