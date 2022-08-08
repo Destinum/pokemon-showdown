@@ -20027,6 +20027,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 			},
+			onModifyMove(move, pokemon) {
+				pokemon.removeVolatile('burrow');
+			}
+			/*onAfterHit(target, pokemon) {
+				pokemon.removeVolatile('burrow');
+			}
+			onAfterSubDamage(damage, target, pokemon) {
+				pokemon.removeVolatile('burrow');
+			}*/
 		},
 		category: "Status",
 		name: "Burrow",
