@@ -20124,7 +20124,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onTry(source, target, move) {
-			if (pokemon.baseSpecies.baseSpecies === 'Volcalumin' && pokemon.transformed) {
+			if (pokemon.species.baseSpecies === 'Volcalumin' && pokemon.transformed) {
 				return null;
 			}
 			return;
@@ -20134,7 +20134,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			spd: 1,
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (pokemon.baseSpecies.baseSpecies === 'Volcalumin' && !pokemon.transformed) {
+			if (pokemon.species.baseSpecies === 'Volcalumin' && !pokemon.transformed) {
 				//const volcaluminForme = pokemon.species.id === 'volcaluminigneous' ? '' : '-Igneous';
 				pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
 			}
