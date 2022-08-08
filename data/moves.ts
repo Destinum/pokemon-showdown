@@ -20189,7 +20189,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		
 		
 		
-	stormbreaker: {		//Not Finished
+	stormbreaker: {
 		num: 10003,
 		accuracy: 95,
 		basePower: 90,

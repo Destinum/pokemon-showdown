@@ -18071,7 +18071,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	volcaluminigneous: {		//Created by Standardbandard
 		num: 5205,
 		name: "Volcalumin-Igneous",
-		baseForme: "Eruption",
+		baseSpecies: "Volcalumin",
+		forme: "Igneous",
 		types: ["Fire", "Ground"],
 		baseStats: {hp: 90, atk: 70, def: 110, spa: 90, spd: 120, spe: 50},
 		abilities: {0: "Volcanic Fire"},
