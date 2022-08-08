@@ -6859,13 +6859,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	
 	aridgale: {
 		name: "Arid Gale",
-		desc: "Damage is increased by 50% during a Sandstorm.",
-		shortDesc: "Damage is increased by 50% during a Sandstorm.",
+		desc: "Power is increased by 50% during a Sandstorm.",
+		shortDesc: "Power is increased by 50% during a Sandstorm.",
 	},
 	frigidgale: {
 		name: "Frigid Gale",
-		desc: "Damage is increased by 50% during Hail.",
-		shortDesc: "Damage is increased by 50% during Hail.",
+		desc: "Power is increased by 50% during Hail.",
+		shortDesc: "Power is increased by 50% during Hail.",
 	},
 	icebreaker: {
 		name: "Icebreaker",
@@ -6945,5 +6945,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Gunshot",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
+	},
+	stormbreaker: {
+		name: "Stormbreaker",
+		desc: "Power is increased by 50% during Rain. If this move fails to hit the target, it ends any current weather conditions.",
+		shortDesc: "Power is increased by 50% during Rain. If this move fails to hit the target, it ends any current weather conditions.",
+		
+		failed: "The concentrated winds were released into the surrounding air instead!",
 	},
 };

@@ -20140,6 +20140,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				break;
 			}
 		},
+		onMoveFail(target, source, move) {
+			this.add('-failed', source, 'Stormbreaker');
+			this.field.clearWeather();
+		},
 		category: "Physical",
 		name: "Stormbreaker",
 		pp: 10,
