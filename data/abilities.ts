@@ -4688,19 +4688,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: 9011,
 	},	
-	tunneler: {			//Not Finished
-		onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (attacker.volatiles['burrow']) {
+	tunneler: {
+		onModifyMove(move, pokemon) {
+			if (pokemon.volatiles['dig']) {				//Boosting moves during Burrow is handled in the move itself in moves.ts
 				this.debug('Tunneler boost');
-				return this.chainModify(2.0);
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, attacker, defender, move) {
-			if (attacker.volatiles['burrow']) {
-				this.debug('Tunneler boost');
-				return this.chainModify(2.0);
+				move.basePower = move.basePower*2;
 			}
 		},
 		name: "Tunneler",

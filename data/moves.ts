@@ -20024,6 +20024,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onModifyMove(move, pokemon) {
+				if (pokemon.ability === 'tunneler') {
+					this.debug('Tunneler boost');
+					move.basePower = move.basePower*2;
+				}
 				pokemon.removeVolatile('burrow');
 				this.add('-end', pokemon, 'move: Burrow', '[silent]');
 			}
@@ -20034,7 +20038,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {nonsky: 1},
 		secondary: null,
-		//target: "allySide",
 		target: "self",
 		type: "Ground",
 		contestType: "Cool",
