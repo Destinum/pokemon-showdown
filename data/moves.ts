@@ -20125,7 +20125,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		onTry(source) {
 			if (source.species.id === 'volcaluminigneous') {
-				//this.attrLastMove('[still]');
+				this.attrLastMove('[still]');
 				this.add('-fail', source, 'move: Magma Burst');
 				return null;
 			}
