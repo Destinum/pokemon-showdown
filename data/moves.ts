@@ -20004,13 +20004,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},*/
-		onAfterHit(target, source) {
+		onHit(target) {
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-				for (const condition of sideConditions) {
-					if (source.side.removeSideCondition(condition)) {
-						this.add('-sideend', source.side, this.dex.conditions.get(condition).name, '[from] move: Burrow', '[of] ' + source);
-					}
+			for (const condition of sideConditions) {
+				if (target.side.removeSideCondition(condition)) {
+					this.add('-sideend', target.side, this.dex.conditions.get(condition).name, '[from] move: Burrow', '[of] ' + target);
 				}
+			}
 		},
 		volatileStatus: 'burrow',
 		condition: {
