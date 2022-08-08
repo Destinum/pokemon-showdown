@@ -20139,7 +20139,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (pokemon.species.id === 'volcalumin') {
-				//const volcaluminForme = pokemon.species.id === 'volcaluminigneous' ? '' : '-Igneous';
+				pokemon.removeVolatile('volcanicfire');
 				pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
 			}
 		},
@@ -20147,95 +20147,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fire",
 		contestType: "Tough",
-	},
-	
-	/*
-	zenmode: {
-		onResidualOrder: 29,
-		onResidual(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Darmanitan' || pokemon.transformed) {
-				return;
-			}
-			if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
-				pokemon.addVolatile('zenmode');
-			} else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
-				pokemon.addVolatile('zenmode'); // in case of base Darmanitan-Zen
-				pokemon.removeVolatile('zenmode');
-			}
-		},
-		onEnd(pokemon) {
-			if (!pokemon.volatiles['zenmode'] || !pokemon.hp) return;
-			pokemon.transformed = false;
-			delete pokemon.volatiles['zenmode'];
-			if (pokemon.species.baseSpecies === 'Darmanitan' && pokemon.species.battleOnly) {
-				pokemon.formeChange(pokemon.species.battleOnly as string, this.effect, false, '[silent]');
-			}
-		},
-		condition: {
-			onStart(pokemon) {
-				if (!pokemon.species.name.includes('Galar')) {
-					if (pokemon.species.id !== 'darmanitanzen') pokemon.formeChange('Darmanitan-Zen');
-				} else {
-					if (pokemon.species.id !== 'darmanitangalarzen') pokemon.formeChange('Darmanitan-Galar-Zen');
-				}
-			},
-			onEnd(pokemon) {
-				if (['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
-					pokemon.formeChange(pokemon.species.battleOnly as string);
-				}
-			},
-		},
-		isPermanent: true,
-		name: "Zen Mode",
-		rating: 0,
-		num: 161,
-	},
-	*/
-		
-	/*
-	relicsong: {
-		num: 547,
-		accuracy: 100,
-		basePower: 75,
-		category: "Special",
-		isNonstandard: "Past",
-		name: "Relic Song",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
-		secondary: {
-			chance: 10,
-			status: 'slp',
-		},
-		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.baseSpecies === 'Meloetta' && !pokemon.transformed) {
-				move.willChangeForme = true;
-			}
-		},
-		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (move.willChangeForme) {
-				const meloettaForme = pokemon.species.id === 'meloettapirouette' ? '' : '-Pirouette';
-				pokemon.formeChange('Meloetta' + meloettaForme, this.effect, false, '[msg]');
-			}
-		},
-		target: "allAdjacentFoes",
-		type: "Normal",
-		contestType: "Beautiful",
-	},
-	*/
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	},	
 	stormbreaker: {
 		num: 10003,
 		accuracy: 95,
@@ -20261,5 +20173,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 		contestType: "Tough",
+	},
+	aquafang: {
+		num: 10004,
+		accuracy: 95,
+		basePower: 65,
+		category: "Physical",
+		name: "Aqua Fang",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 10,
+				volatileStatus: 'confusion',
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
 	},
 };

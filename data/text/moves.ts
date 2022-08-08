@@ -6960,4 +6960,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		
 		end: "The concentrated winds were released into the surrounding air instead!",
 	},
+	aquafang: {
+		name: "Aqua Fang",
+		desc: "Has a 10% chance to confuse the target and a 10% chance to make it flinch.",
+		shortDesc: "10% chance to cause confusion. 10% chance to flinch.",
+	},
 };

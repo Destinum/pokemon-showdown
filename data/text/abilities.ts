@@ -1811,6 +1811,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
 		shortDesc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
 	},
-	
-	
+	volcanicfire: {
+		name: "Volcanic Fire",
+		desc: "This Pokemon is immune to Fire-type moves. The first time it is hit by a Fire-type move, its attacking stat is multiplied by 1.5 while using a Fire-type attack as long as it remains active and has this Ability. If this Pokemon is frozen, it cannot be defrosted by Fire-type attacks.",
+		shortDesc: "This Pokemon's Fire attacks do 1.5x damage if hit by one Fire move; Fire immunity.",
+
+		start: "  The power of [POKEMON]'s Fire-type moves rose!",
+	},
 };
