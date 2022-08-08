@@ -20004,6 +20004,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},*/
+		onAfterHit(target, source) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (source.side.removeSideCondition(condition)) {
+						this.add('-sideend', source.side, this.dex.conditions.get(condition).name, '[from] move: Burrow', '[of] ' + source);
+					}
+				}
+		},
 		volatileStatus: 'burrow',
 		condition: {
 			onStart(pokemon) {
@@ -20028,11 +20036,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onModifyMove(move, pokemon) {
-				//runPrepareAnim('burrow', pokemon, pokemon);
 				pokemon.removeVolatile('burrow');
 				this.add('-end', pokemon, 'move: Burrow', '[silent]');
 			}
-			/*runPrepareAnim(moveid: ID, attacker: Pokemon, defender: Pokemon) {
+			/*
 			
 			onAfterHit(target, pokemon) {
 				pokemon.removeVolatile('burrow');
@@ -20054,74 +20061,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 		
 	/*
-	aquaring: {
-		num: 392,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Aqua Ring",
-		pp: 20,
-		priority: 0,
-		flags: {snatch: 1},
-		volatileStatus: 'aquaring',
-		condition: {
-			onStart(pokemon) {
-				this.add('-start', pokemon, 'Aqua Ring');
-			},
-			onResidualOrder: 6,
-			onResidual(pokemon) {
-				this.heal(pokemon.baseMaxhp / 16);
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Water",
-		zMove: {boost: {def: 1}},
-		contestType: "Beautiful",
-	},
-	
-	dig: {
-		num: 91,
-		accuracy: 100,
-		basePower: 80,
-		category: "Physical",
-		name: "Dig",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		},
-		condition: {
-			duration: 2,
-			onImmunity(type, pokemon) {
-				if (type === 'sandstorm' || type === 'hail') return false;
-			},
-			onInvulnerability(target, source, move) {
-				if (['earthquake', 'magnitude'].includes(move.id)) {
-					return;
-				}
-				return false;
-			},
-			onSourceModifyDamage(damage, source, target, move) {
-				if (move.id === 'earthquake' || move.id === 'magnitude') {
-					return this.chainModify(2);
-				}
-			},
-		},
-		secondary: null,
-		target: "normal",
-		type: "Ground",
-		contestType: "Tough",
-	},
 	
 	
 	/*
