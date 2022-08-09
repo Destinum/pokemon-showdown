@@ -4749,6 +4749,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 10002,
 	},	
 	volcanicfire: {		//Referenced in src/battle-animations.ts on the client side.
+		let originalAbility = null;
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				move.accuracy = true;
@@ -4759,6 +4760,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					target.formeChange('Volcalumin', this.effect, true);
 					this.boost({def: -1}, target, target, null, true);
 					this.boost({spd: -1}, target, target, null, true);
+					target.setAbility(originalAbility, true);
 				}
 				return null;
 			}

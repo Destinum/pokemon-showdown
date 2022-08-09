@@ -20143,7 +20143,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const volcaluminForme = pokemon.species.id === 'volcaluminigneous' ? '' : '-Igneous';
 				pokemon.formeChange('Volcalumin' + volcaluminForme, this.effect, false);
 				//pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
+				const ogAbility = pokemon.getAbility();
 				pokemon.setAbility('volcanicfire', true);
+				pokemon.ability.originalAbility = ogAbility;
 			}
 		},
 		secondary: null,
