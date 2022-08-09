@@ -4749,7 +4749,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 10002,
 	},	
 	volcanicfire: {		//Referenced in src/battle-animations.ts on the client side and dex-abilities.ts on the server side.
-		//originalAbility: null,
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				move.accuracy = true;
@@ -4766,14 +4765,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
-		/*onSwitchOut(pokemon) {
-			if (pokemon.species.id === 'volcaluminigneous') {
-				pokemon.formeChange('Volcalumin', this.effect, true);
-			}
-		},*/	
-		/*onEnd(pokemon) {
-			pokemon.removeVolatile('volcanicfire');
-		},*/
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart(target) {
@@ -4802,58 +4793,4 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 10003,
 	},
-	
-		
-	/*
-	flashfire: {
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fire') {
-				move.accuracy = true;
-				if (!target.addVolatile('flashfire')) {
-					this.add('-immune', target, '[from] ability: Flash Fire');
-				}
-				return null;
-			}
-		},
-		onEnd(pokemon) {
-			pokemon.removeVolatile('flashfire');
-		},
-		condition: {
-			noCopy: true, // doesn't get copied by Baton Pass
-			onStart(target) {
-				this.add('-start', target, 'ability: Flash Fire');
-			},
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, attacker, defender, move) {
-				if (move.type === 'Fire' && attacker.hasAbility('flashfire')) {
-					this.debug('Flash Fire boost');
-					return this.chainModify(1.5);
-				}
-			},
-			onModifySpAPriority: 5,
-			onModifySpA(atk, attacker, defender, move) {
-				if (move.type === 'Fire' && attacker.hasAbility('flashfire')) {
-					this.debug('Flash Fire boost');
-					return this.chainModify(1.5);
-				}
-			},
-			onEnd(target) {
-				this.add('-end', target, 'ability: Flash Fire', '[silent]');
-			},
-		},
-		isBreakable: true,
-		name: "Flash Fire",
-		rating: 3.5,
-		num: 18,
-	},
-	regenerator: {
-		onSwitchOut(pokemon) {
-			pokemon.heal(pokemon.baseMaxhp / 3);
-		},
-		name: "Regenerator",
-		rating: 4.5,
-		num: 144,
-	},
-	
-	*/
 };
