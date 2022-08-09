@@ -6733,6 +6733,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
+	icewyvern: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	gravitybrachy: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
+	wolverine: {
+		tier: "PU",
+		doublesTier: "DUU",
+	},
 	
 //Start of other people's Fakemons
 

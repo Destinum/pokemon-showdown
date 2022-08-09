@@ -1803,6 +1803,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This pokémon’s moves have their power doubled while in the semi-invulnerable state of Burrow or Dig.",
 		shortDesc: "This pokémon’s moves have their power doubled while in the semi-invulnerable state of Burrow or Dig.",
 	},
+	coldsnap: {
+		name: "Cold Snap",
+		desc: "This Pokemon is immune to Ice-type moves and raises its Speed by 1 stage when hit by an Ice-type move.",
+		shortDesc: "This Pokemon's Speed is raised 1 stage if hit by an Ice move; Ice immunity.",
+	},
+	downtoearth: {
+		name: "Down to Earth",
+		desc: " Activates intense Gravity for five turns upon entering the field.",
+		shortDesc: " Activates intense Gravity for five turns upon entering the field.",
+	},
 
 //Start of other people's Fakemon Abilities
 	

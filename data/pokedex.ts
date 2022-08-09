@@ -18007,6 +18007,39 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
+	icewyvern: {
+		num: 4231,
+		name: "Ice Wyvern",
+		types: ["Dragon", "Ice"],
+		baseStats: {hp: 70, atk: 120, def: 65, spa: 120, spd: 65, spe: 100},
+		abilities: {0: "Cold Snap", H: "Snow Warning"},
+		heightm: 5.0,
+		weightkg: 1,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	gravitybrachy: {
+		num: 4232,
+		name: "Gravity Brachy",
+		types: ["Psychic", "Ground"],
+		baseStats: {hp: 120, atk: 100, def: 80, spa: 80, spd: 80, spe: 40},
+		abilities: {0: "Down to Earth"},
+		heightm: 2.5,
+		weightkg: 950,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	wolverine: {
+		num: 4233,
+		name: "Wolverine",
+		types: ["Ice"],
+		baseStats: {hp: 60, atk: 105, def: 120, spa: 60, spd: 80, spe: 70},
+		abilities: {0: "Guts", 1: "Intimidate", H: "Slush Rush"},
+		heightm: 5.0,
+		weightkg: 1,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 	
 	//Start of other people's Fakemons
 	
@@ -18095,3 +18128,16 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 };
+
+
+/*
+		num: ,
+		name: "",
+		types: ["", ""],
+		baseStats: {hp: , atk: , def: , spa: , spd: , spe: },
+		abilities: {0: "", 1: "", H: ""},
+		heightm: 5.0,
+		weightkg: 1,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+*/
