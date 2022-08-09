@@ -20141,6 +20141,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.species.id === 'volcalumin') {
 				pokemon.removeVolatile('volcanicfire');
 				pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
+				pokemon.setAbility('volcanicfire');
 			}
 		},
 		secondary: null,

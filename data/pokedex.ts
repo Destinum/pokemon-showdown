@@ -18075,7 +18075,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Igneous",
 		types: ["Fire", "Ground"],
 		baseStats: {hp: 90, atk: 70, def: 110, spa: 90, spd: 120, spe: 50},
-		abilities: {0: "Flash Fire"},		//abilities: {0: "Volcanic Fire"},
+		abilities: {0: "Volcanic Fire"},
 		heightm: 5.0,
 		weightkg: 1,
 		color: "Green",
