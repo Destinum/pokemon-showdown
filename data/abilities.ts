@@ -4756,18 +4756,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-immune', target, '[from] ability: Volcanic Fire');
 				}
 				if (target.species.id === 'volcaluminigneous') {
-					target.formeChange('Volcalumin', this.effect, true);
+					target.formeChange('Volcalumin', this.effect, false);
 					this.boost({def: -1}, target, target, null, true);
 					this.boost({spd: -1}, target, target, null, true);
 				}
 				return null;
 			}
 		},
-		onSwitchOut(pokemon) {
+		/*onSwitchOut(pokemon) {
 			if (pokemon.species.id === 'volcaluminigneous') {
 				pokemon.formeChange('Volcalumin', this.effect, true);
 			}
-		},	
+		},*/	
 		/*onEnd(pokemon) {
 			pokemon.removeVolatile('volcanicfire');
 		},*/
