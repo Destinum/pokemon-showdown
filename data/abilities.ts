@@ -4725,6 +4725,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!target.addVolatile('volcanicfire')) {
 					this.add('-immune', target, '[from] ability: Volcanic Fire');
 				}
+				target.formeChange('Volcalumin', this.effect, false, '[silent]');
+				this.boost({def: -1}, target, target, null, true);
+				this.boost({spd: -1}, target, target, null, true);
 				return null;
 			}
 		},
