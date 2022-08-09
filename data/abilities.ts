@@ -4714,10 +4714,40 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 10001,
 	},
 	hallucination: {
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+				this.add('-activate', pokemon, 'ability: Hallucination');
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'confusion') return null;
+		},
+		onHit(target, source, move) {
+			if (move?.volatileStatus === 'confusion') {
+				this.add('-immune', target, 'confusion', '[from] ability: Hallucination');
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			for (const target of pokemon.adjacentAllies()) {
+				if (this.randomChance(1, 2)) {
+					this.add('-ability', pokemon, 'Hallucination', 'boost');
+					target.addVolatile('confusion');
+				}
+			}
+			for (const target of pokemon.adjacentFoes()) {
+				if (this.randomChance(1, 2)) {
+					this.add('-ability', pokemon, 'Hallucination', 'boost');
+					target.addVolatile('confusion');
+				}
+			}
+		},		
 		name: "Hallucination",
 		rating: 0,
 		num: 10002,
-	},
+	},	
 	volcanicfire: {		//Referenced in src/battle-animations.ts on the client side.
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
@@ -4725,12 +4755,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!target.addVolatile('volcanicfire')) {
 					this.add('-immune', target, '[from] ability: Volcanic Fire');
 				}
-				target.formeChange('Volcalumin', this.effect, false, '[silent]');
-				this.boost({def: -1}, target, target, null, true);
-				this.boost({spd: -1}, target, target, null, true);
+				if (target.species.id === 'volcaluminigneous') {
+					target.formeChange('Volcalumin', this.effect, true);
+					this.boost({def: -1}, target, target, null, true);
+					this.boost({spd: -1}, target, target, null, true);
+				}
 				return null;
 			}
 		},
+		onSwitchOut(pokemon) {
+			if (pokemon.species.id === 'volcaluminigneous') {
+				pokemon.formeChange('Volcalumin', this.effect, true);
+			}
+		},	
 		/*onEnd(pokemon) {
 			pokemon.removeVolatile('volcanicfire');
 		},*/
@@ -4806,5 +4843,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 18,
 	},
+	regenerator: {
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 3);
+		},
+		name: "Regenerator",
+		rating: 4.5,
+		num: 144,
+	},
+	
 	*/
 };

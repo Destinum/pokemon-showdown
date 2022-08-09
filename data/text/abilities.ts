@@ -1808,8 +1808,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	
 	shootdown: {
 		name: "Shoot Down",
-		desc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
-		shortDesc: "This Pokemon's non-contact moves have their power multiplied by 30%.",
+		desc: "This pokémon's non-contact moves have their power multiplied by 30%.",
+		shortDesc: "This pokémon's non-contact moves have their power multiplied by 30%.",
+	},
+	hallucination: {
+		name: "Hallucination",
+		desc: "This pokémon is immune to confusion. At the end of each turn, each other pokémon has a 25% chance to become confused.",
+		shortDesc: "This pokémon is immune to confusion. At the end of each turn, each other pokémon has a 25% chance to become confused.",
 	},
 	volcanicfire: {
 		name: "Volcanic Fire",
