@@ -4732,13 +4732,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
 			for (const target of pokemon.adjacentAllies()) {
-				if (this.randomChance(1, 2)) {
+				if (!target.volatiles['confusion'] && this.randomChance(1, 4)) {
 					this.add('-ability', pokemon, 'Hallucination', 'boost');
 					target.addVolatile('confusion');
 				}
 			}
 			for (const target of pokemon.adjacentFoes()) {
-				if (this.randomChance(1, 2)) {
+				if (!target.volatiles['confusion'] && this.randomChance(1, 4)) {
 					this.add('-ability', pokemon, 'Hallucination', 'boost');
 					target.addVolatile('confusion');
 				}
