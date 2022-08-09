@@ -20145,7 +20145,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				//pokemon.formeChange('Volcalumin-Igneous', this.effect, false, '[silent]');
 				const ogAbility = pokemon.getAbility();
 				pokemon.setAbility('volcanicfire', true);
-				pokemon.ability.originalAbility = ogAbility;
+				pokemon.getAbility().originalAbility = ogAbility;
 			}
 		},
 		secondary: null,

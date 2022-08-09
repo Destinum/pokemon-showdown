@@ -23,6 +23,7 @@ export class Ability extends BasicEffect implements Readonly<BasicEffect> {
 	declare readonly condition?: ConditionData;
 	declare readonly isPermanent?: boolean;
 	declare readonly isBreakable?: boolean;
+	declare originalAbility: string;			//Added for Fakemon
 
 	constructor(data: AnyObject) {
 		super(data);

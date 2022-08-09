@@ -4748,8 +4748,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 10002,
 	},	
-	volcanicfire: {		//Referenced in src/battle-animations.ts on the client side.
-		originalAbility: null,
+	volcanicfire: {		//Referenced in src/battle-animations.ts on the client side and dex-abilities.ts on the server side.
+		//originalAbility: null,
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				move.accuracy = true;
@@ -4757,10 +4757,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-immune', target, '[from] ability: Volcanic Fire');
 				}
 				if (target.species.id === 'volcaluminigneous') {
-					target.formeChange('Volcalumin', this.effect, true);
+					target.formeChange('Volcalumin', this.effect, false);
 					this.boost({def: -1}, target, target, null, true);
 					this.boost({spd: -1}, target, target, null, true);
-					target.setAbility(originalAbility, true);
+					const ogAbility = target.getAbility().originalAbility;
+					target.setAbility(ogAbility, true);
 				}
 				return null;
 			}

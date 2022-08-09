@@ -18060,7 +18060,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseForme: "Eruption",
 		types: ["Fire", "Ground"],
 		baseStats: {hp: 90, atk: 70, def: 110, spa: 90, spd: 120, spe: 50},
-		abilities: {0: "Blaze", 1: "Mold Breaker", H: "Flame Body"},
+		abilities: {0: "Blaze", H: "Flame Body"},
 		heightm: 5.0,
 		weightkg: 1,
 		color: "Green",
