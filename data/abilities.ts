@@ -4715,7 +4715,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	downtoearth: {
 		onStart(source) {
-			//this.field.setWeather('hail');
+			if (!this.field.getPseudoWeather('Gravity')) {
+				this.add('-activate', source, 'ability: Down to Earth');
+			}
 			this.field.addPseudoWeather('gravity');
 		},
 		name: "Down to Earth",
@@ -4723,96 +4725,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 9014,
 	},	
 		
-	
-		
-	/*	
-	gravity: {
-		num: 356,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Gravity",
-		pp: 5,
-		priority: 0,
-		flags: {nonsky: 1},
-		pseudoWeather: 'gravity',
-		condition: {
-			duration: 5,
-			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
-					return 7;
-				}
-				return 5;
-			},
-			onFieldStart() {
-				this.add('-fieldstart', 'move: Gravity');
-				for (const pokemon of this.getAllActive()) {
-					let applies = false;
-					if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
-						applies = true;
-						this.queue.cancelMove(pokemon);
-						pokemon.removeVolatile('twoturnmove');
-					}
-					if (pokemon.volatiles['skydrop']) {
-						applies = true;
-						this.queue.cancelMove(pokemon);
 
-						if (pokemon.volatiles['skydrop'].source) {
-							this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
-						}
-						pokemon.removeVolatile('skydrop');
-						pokemon.removeVolatile('twoturnmove');
-					}
-					if (pokemon.volatiles['magnetrise']) {
-						applies = true;
-						delete pokemon.volatiles['magnetrise'];
-					}
-					if (pokemon.volatiles['telekinesis']) {
-						applies = true;
-						delete pokemon.volatiles['telekinesis'];
-					}
-					if (applies) this.add('-activate', pokemon, 'move: Gravity');
-				}
-			},
-			onModifyAccuracy(accuracy) {
-				if (typeof accuracy !== 'number') return;
-				return this.chainModify([6840, 4096]);
-			},
-			onDisableMove(pokemon) {
-				for (const moveSlot of pokemon.moveSlots) {
-					if (this.dex.moves.get(moveSlot.id).flags['gravity']) {
-						pokemon.disableMove(moveSlot.id);
-					}
-				}
-			},
-			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
-			onBeforeMovePriority: 6,
-			onBeforeMove(pokemon, target, move) {
-				if (move.flags['gravity'] && !move.isZ) {
-					this.add('cant', pokemon, 'move: Gravity', move);
-					return false;
-				}
-			},
-			onModifyMove(move, pokemon, target) {
-				if (move.flags['gravity'] && !move.isZ) {
-					this.add('cant', pokemon, 'move: Gravity', move);
-					return false;
-				}
-			},
-			onFieldResidualOrder: 27,
-			onFieldResidualSubOrder: 2,
-			onFieldEnd() {
-				this.add('-fieldend', 'move: Gravity');
-			},
-		},
-		secondary: null,
-		target: "all",
-		type: "Psychic",
-		zMove: {boost: {spa: 1}},
-		contestType: "Clever",
-	},
-	*/
 		
 //Start of other people's Fakemon Abilities
 	
