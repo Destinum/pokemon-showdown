@@ -5612,11 +5612,26 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Aggron"],
 		eggGroups: ["Monster"],
 	},
-	aggron: {
+	/*aggron: {
 		num: 306,
 		name: "Aggron",
 		types: ["Steel", "Rock"],
 		baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
+		heightm: 2.1,
+		weightkg: 360,
+		color: "Gray",
+		prevo: "Lairon",
+		evoLevel: 42,
+		eggGroups: ["Monster"],
+		otherFormes: ["Aggron-Mega"],
+		formeOrder: ["Aggron", "Aggron-Mega"],
+	},*/
+	aggron: {		//Custom Fakemon variant for Nathan
+		num: 306,
+		name: "Aggron",
+		types: ["Steel", "Rock"],
+		baseStats: {hp: 100, atk: 110, def: 180, spa: 60, spd: 100, spe: 50},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
 		heightm: 2.1,
 		weightkg: 360,
