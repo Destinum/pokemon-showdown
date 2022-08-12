@@ -5642,13 +5642,27 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Aggron-Mega"],
 		formeOrder: ["Aggron", "Aggron-Mega"],
 	},
-	aggronmega: {
+	/*aggronmega: {
 		num: 306,
 		name: "Aggron-Mega",
 		baseSpecies: "Aggron",
 		forme: "Mega",
 		types: ["Steel"],
 		baseStats: {hp: 70, atk: 140, def: 230, spa: 60, spd: 80, spe: 50},
+		abilities: {0: "Filter"},
+		heightm: 2.2,
+		weightkg: 395,
+		color: "Gray",
+		eggGroups: ["Monster"],
+		requiredItem: "Aggronite",
+	},*/
+	aggronmega: {		//Custom Fakemon variant for Nathan
+		num: 306,
+		name: "Aggron-Mega",
+		baseSpecies: "Aggron",
+		forme: "Mega",
+		types: ["Steel"],
+		baseStats: {hp: 100, atk: 140, def: 230, spa: 60, spd: 120, spe: 50},
 		abilities: {0: "Filter"},
 		heightm: 2.2,
 		weightkg: 395,
