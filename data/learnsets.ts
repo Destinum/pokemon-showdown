@@ -83286,7 +83286,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			trickroom: ["8M"],
 		},
 	},
-	moosecentaur: {
+	cervalier: {
 		learnset: {
             protect: ["8M"],
 			rest: ["8M"],

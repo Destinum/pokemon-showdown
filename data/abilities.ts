@@ -4533,7 +4533,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.boost({accuracy: 1}, pokemon);
 		},
-		onEnd(pokemon) {
+		onSwitchOut(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {

@@ -17824,9 +17824,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
-	moosecentaur: {
+	cervalier: {
 		num: 4212,
-		name: "Moose Centaur",
+		name: "Cervalier",
 		types: ["Fighting", "Steel"],
 		baseStats: {hp: 95, atk: 111, def: 120, spa: 44, spd: 80, spe: 50},
 		abilities: {0: "Charge", 1: "Intimidate"},

@@ -6657,7 +6657,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
-	moosecentaur: {
+	cervalier: {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
