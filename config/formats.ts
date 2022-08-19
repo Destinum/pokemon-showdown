@@ -26,9 +26,9 @@ export const Formats: FormatList = [
 		section: "Server Specific Formats",
 	},
 	{
-		name: "Rebalanced OU with Fakemons",
+		name: "[Gen 42] Rebalanced OU",
 
-		mod: 'gen8',
+		mod: 'gen42',
 		ruleset: ['Standard', 'Dynamax Clause'],
 		banlist: [
 			'Uber', 'AG', 'Arena Trap', 'Moody', 'Power Construct', 'Sand Veil', 'Shadow Tag', 'Snow Cloak',
