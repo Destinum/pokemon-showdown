@@ -16703,6 +16703,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		zMove: {boost: {def: 1}},
 		contestType: "Cool",
+		desc: "Stuff",
+		shortDesc: "Short Stuff",
 	},
 	steameruption: {
 		num: 592,
