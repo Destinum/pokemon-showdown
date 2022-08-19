@@ -37,7 +37,8 @@ interface FormatData {
 	[source: string]: PokemonSets;
 }
 
-type GenerationNum = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 42;			//Added 42 for custom and/or fakemon
+//type GenerationNum = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 42;			//Added 42 for custom and/or fakemon
+type GenerationNum = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 // The tiers we support, ie. ones that we have data sources for.
 export const TIERS = new Set([
@@ -57,14 +58,14 @@ for (let gen = 1; gen <= 8; gen++) {
 		}
 	}
 }
-for (const tier of TIERS) {			//Added for custom and/or fakemon
+/*for (const tier of TIERS) {			//Added for custom and/or fakemon
 	let gen = 42;
 	const format = Dex.formats.get(`gen${gen}${tier}`);
 	if (format.exists) {
 		FORMATS.set(format.id, {gen: gen as GenerationNum, format});
 		VALIDATORS.set(format.id, new TeamValidator(format));
 	}
-}
+}*/
 
 export async function importAll() {
 	const index = await request(smogon.Statistics.URL);
@@ -73,7 +74,7 @@ export async function importAll() {
 	for (let gen = 1; gen <= 8; gen++) {
 		imports.push(importGen(gen as GenerationNum, index));
 	}
-	imports.push(importGen(42 as GenerationNum, index));			//Added for custom and/or fakemon
+	//imports.push(importGen(42 as GenerationNum, index));			//Added for custom and/or fakemon
 
 	return Promise.all(imports);
 }
