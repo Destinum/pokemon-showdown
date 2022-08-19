@@ -26,7 +26,7 @@ export const Formats: FormatList = [
 		section: "Server Specific Formats",
 	},
 	{
-		name: "[Gen 8] Rebalanced OU",
+		name: "[Gen 42] Rebalanced OU",
 
 		mod: 'gen42',
 		ruleset: ['Standard', 'Dynamax Clause'],
