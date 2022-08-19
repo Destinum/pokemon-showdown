@@ -17763,7 +17763,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 95, atk: 110, def: 100, spa: 80, spd: 85, spe: 55},
 		abilities: {0: "Flash Fire", H: "Drought"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17774,7 +17774,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 50, atk: 120, def: 50, spa: 55, spd: 70, spe: 135},
 		abilities: {0: "Water Absorb", 1: "Sap Sipper", H: "Levitate"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17785,7 +17785,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 65, atk: 55, def: 70, spa: 145, spd: 115, spe: 70},
 		abilities: {0: "Power of Alchemy", 1: "Curious Medicine", H: "Magic Bounce"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17796,7 +17796,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 90, atk: 90, def: 80, spa: 130, spd: 100, spe: 110},
 		abilities: {0: "Mold Breaker", 1: "Winds of War", H: "Envoy of Folkvangr"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17831,7 +17831,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 95, atk: 111, def: 120, spa: 44, spd: 80, spe: 50},
 		abilities: {0: "Charge", 1: "Intimidate"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17842,7 +17842,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 65, atk: 100, def: 201, spa: 45, spd: 80, spe: 30},
 		abilities: {0: "Battle Armor", H: "Rough Skin"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17853,7 +17853,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 91, atk: 74, def: 65, spa: 118, spd: 106, spe: 67},
 		abilities: {0: "Swift Swim", H: "Amphibious"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17864,7 +17864,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 130, atk: 130, def: 65, spa: 70, spd: 65, spe: 70},
 		abilities: {0: "Dry Skin", H: "Solid Rock"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17875,7 +17875,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 80, atk: 72, def: 70, spa: 108, spd: 70, spe: 90},
 		abilities: {0: "Snow Cloak", 1: "Keen Eye", H: "Slush Rush"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17886,7 +17886,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 80, atk: 130, def: 100, spa: 70, spd: 70, spe: 90},
 		abilities: {0: "Lightning Rod", 1: "Soundproof", H: "Motor Drive"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17897,7 +17897,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 60, atk: 70, def: 95, spa: 95, spd: 70, spe: 105},
 		abilities: {0: "Levitate"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17908,7 +17908,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 55, atk: 65, def: 75, spa: 80, spd: 90, spe: 115},
 		abilities: {0: "Prankster", 1: "Moody"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17919,7 +17919,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 100, atk: 100, def: 75, spa: 60, spd: 85, spe: 65},
 		abilities: {0: "Thick Fat", 1: "Oblivious", H: "Unaware"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17930,7 +17930,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 95, atk: 60, def: 65, spa: 110, spd: 65, spe: 130},
 		abilities: {0: "Overcoat", H: "Speed Boost"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		prevo: "Eevee",
 		eggGroups: ["Undiscovered"],
@@ -17942,7 +17942,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 95, atk: 110, def: 130, spa: 65, spd: 65, spe: 60},
 		abilities: {0: "Mold Breaker", H: "Multiscale"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		prevo: "Eevee",
 		eggGroups: ["Undiscovered"],
@@ -17954,7 +17954,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 90, atk: 110, def: 130, spa: 75, spd: 90, spe: 40},
 		abilities: {0: "Intimidate", 1: "Shed Skin", H: "Merciless"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		prevo: "Arbok",
 		eggGroups: ["Undiscovered"],
@@ -17966,7 +17966,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 90, atk: 120, def: 75, spa: 80, spd: 75, spe: 100},
 		abilities: {0: "Levitate", H: "Moxie"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17977,7 +17977,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 60, atk: 50, def: 60, spa: 85, spd: 90, spe: 100},
 		abilities: {0: "Sand Veil", 1: "Overcoat", H: "Sand Stream"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17988,7 +17988,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 70, atk: 75, def: 118, spa: 60, spd: 102, spe: 65},
 		abilities: {0: "Water Absorb", 1: "Rough Skin", H: "Thick Fat"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -17999,7 +17999,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 85, atk: 90, def: 115, spa: 40, spd: 70, spe: 90},
 		abilities: {0: "Fluffy", 1: "Thick Fat", H: "Sap Sipper"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18010,7 +18010,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 70, atk: 100, def: 65, spa: 45, spd: 65, spe: 95},
 		abilities: {0: "Volt Absorb", 1: "Slush Rush", H: "Swift Swim"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18021,7 +18021,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 80, atk: 125, def: 75, spa: 45, spd: 115, spe: 80},
 		abilities: {0: "Snow Cover", 1: "Winter's Blessing", H: "Sap Sipper"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18032,7 +18032,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 70, atk: 100, def: 75, spa: 65, spd: 75, spe: 90},
 		abilities: {0: "Tunneler"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18043,7 +18043,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 70, atk: 120, def: 65, spa: 120, spd: 65, spe: 100},
 		abilities: {0: "Cold Snap", H: "Snow Warning"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18065,7 +18065,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 60, atk: 105, def: 120, spa: 60, spd: 80, spe: 70},
 		abilities: {0: "Guts", 1: "Intimidate", H: "Slush Rush"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18079,7 +18079,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 40, atk: 80, def: 70, spa: 130, spd: 60, spe: 105},
 		abilities: {0: "Shoot Down"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18090,7 +18090,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 103, atk: 127, def: 67, spa: 83, spd: 131, spe: 59},
 		abilities: {0: "Beast Boost"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18101,7 +18101,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 80, atk: 120, def: 110, spa: 71, spd: 90, spe: 26},
 		abilities: {0: "Analytic", 1: "Steadfast", H: "Inner Focus"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18112,7 +18112,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 100, atk: 60, def: 80, spa: 90, spd: 85, spe: 105},
 		abilities: {0: "Overgrow", H: "Hallucination"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18124,7 +18124,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 90, atk: 70, def: 110, spa: 90, spd: 120, spe: 50},
 		abilities: {0: "Blaze", H: "Flame Body"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Volcalumin-Igneous"],
@@ -18139,7 +18139,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 90, atk: 70, def: 110, spa: 90, spd: 120, spe: 50},
 		abilities: {0: "Volcanic Fire"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		requiredMove: "Magma Burst",
@@ -18152,7 +18152,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: 80, atk: 125, def: 55, spa: 100, spd: 70, spe: 100},
 		abilities: {0: "Torrent", H: "Drizzle"},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
@@ -18166,7 +18166,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {hp: , atk: , def: , spa: , spd: , spe: },
 		abilities: {0: "", 1: "", H: ""},
 		heightm: 5.0,
-		weightkg: 1,
+		weightkg: 1,		//Not Proper Weight
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 */
