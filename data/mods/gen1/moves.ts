@@ -684,6 +684,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		secondary: null,
 		target: "normal",
+		desc: "Stuff",
+		shortDesc: "Short Stuff",
 	},
 	rockthrow: {
 		inherit: true,
