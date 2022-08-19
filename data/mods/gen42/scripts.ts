@@ -1,3 +1,3 @@
 export const Scripts: ModdedBattleScriptsData = {
-	gen: 42,
+	gen: 8,
 };
