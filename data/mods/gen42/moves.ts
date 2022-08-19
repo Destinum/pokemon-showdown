@@ -21,7 +21,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 		secondary: null,
-		target: "foeSide",
+		target: "allySide",
 		type: "Rock",
 		zMove: {boost: {def: 1}},
 		contestType: "Cool",
