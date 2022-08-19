@@ -83905,7 +83905,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: ["8M"],
 		},
 	},
-	mossmuskox: {
+	mosskox: {
 		learnset: {
             protect: ["8M"],
 			rest: ["8M"],

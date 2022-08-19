@@ -6717,7 +6717,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "DUU",
 	},
-	mossmuskox: {
+	mosskox: {
 		tier: "PU",
 		doublesTier: "DUU",
 	},

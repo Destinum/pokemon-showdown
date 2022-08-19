@@ -17992,9 +17992,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
-	mossmuskox: {
+	mosskox: {
 		num: 4227,
-		name: "Moss Muskox",
+		name: "Mosskox",
 		types: ["Ground", "Grass"],
 		baseStats: {hp: 85, atk: 90, def: 115, spa: 40, spd: 70, spe: 90},
 		abilities: {0: "Fluffy", 1: "Thick Fat", H: "Sap Sipper"},
