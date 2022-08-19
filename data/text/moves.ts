@@ -133,10 +133,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ancient Power",
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
-		gen42: {
-			desc: "Stuff",
-			shortDesc: "Short Stuff",
-		},
 	},
 	appleacid: {
 		name: "Apple Acid",
@@ -6941,6 +6937,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Tillage",
 		desc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. Electric Terrain: The target is paralyzed. Grassy Terrain: The user restored 50% of its max HP. Misty Terrain: Every pokémon in the user's party is cured of any non-volatile status condition. Psychic Terrain: Power is increased by 50% and the target’s special defense is used for damage calculation rather than its defense.",
 		shortDesc: "If a special terrain is active, this move clears it and gains a bonus effect depending on the terrain cleared. Electric Terrain: The target is paralyzed. Grassy Terrain: The user restored 50% of its max HP. Misty Terrain: Every pokémon in the user's party is cured of any non-volatile status condition. Psychic Terrain: Power is increased by 50% and the target’s special defense is used for damage calculation rather than its defense.",
+		gen42: {
+			desc: "Stuff",
+			shortDesc: "Short Stuff",
+		},
 	},
 	
 //Start of other people's Fakemon Moves
