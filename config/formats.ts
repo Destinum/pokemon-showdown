@@ -19,6 +19,23 @@ The column value will be ignored for repeat sections.
 
 export const Formats: FormatList = [
 
+	// Server Specific Formats
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "Server Specific Formats",
+	},
+	{
+		name: "Rebalanced OU with Fakemons",
+
+		mod: 'gen42',
+		ruleset: ['Standard', 'Dynamax Clause'],
+		banlist: [
+			'Uber', 'AG', 'Arena Trap', 'Moody', 'Power Construct', 'Sand Veil', 'Shadow Tag', 'Snow Cloak',
+			'Bright Powder', 'King\'s Rock', 'Lax Incense', 'Baton Pass',
+		],
+	},
+	
 	// Sw/Sh Singles
 	///////////////////////////////////////////////////////////////////
 
