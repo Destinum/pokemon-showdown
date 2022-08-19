@@ -20114,7 +20114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Tough",
 	},
-	magmaburst: {		//Not Finished
+	magmaburst: {
 		num: 10002,
 		accuracy: 100,
 		basePower: 80,
