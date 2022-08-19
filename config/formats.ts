@@ -28,7 +28,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 8] Rebalanced OU",
 
-		mod: 'gen42',
+		mod: 'gen8rebalancedou',
 		ruleset: ['Standard', 'Dynamax Clause'],
 		banlist: [
 			'Uber', 'AG', 'Arena Trap', 'Moody', 'Power Construct', 'Sand Veil', 'Shadow Tag', 'Snow Cloak',
