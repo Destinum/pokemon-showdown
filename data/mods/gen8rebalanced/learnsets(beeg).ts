@@ -34569,7 +34569,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			uproar: ["8M", "7T", "6T", "5T", "4T"],
 			waterpulse: ["7T", "6T", "4M", "3M"],
 			whirlpool: ["8M", "4M"],
-			recover: ["42M"],			//Custom Move, added for Nathan
+			recover: ["8M"],			//Custom Move, added for Nathan
 		},
 		eventData: [
 			{generation: 3, level: 100, moves: ["irontail", "protect", "metalsound", "doubleedge"], pokeball: "pokeball"},
@@ -83254,8 +83254,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hypervoice: ["8M"],
 			psychic: ["8M"],
 			psyshock: ["8M"],
-			flamethrower: ["8M"],
-			fireblast: ["8M"],
 			mysticalfire: ["8M"],
 			flashcannon: ["8M"],
 			calmmind: ["8M"],
@@ -83271,9 +83269,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			battlecry: ["8M"],
 			aurasphere: ["8M"],
 			focusblast: ["8M"],
-			foulplay: ["8M"],
 			darkpulse: ["8M"],
-			snarl: ["8M"],
 			blackhole: ["8M"],
 			shadowball: ["8M"],
 			flashcannon: ["8M"],
@@ -83288,9 +83284,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			calmmind: ["8M"],
 			sludgebomb: ["8M"],
 			trickroom: ["8M"],
-			taunt: ["8M"],
-			switcheroo: ["8M"],
-			gravity: ["8M"],
 		},
 	},
 	cervalier: {
