@@ -17860,9 +17860,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	basilosaurus: {
 		num: 4215,
 		name: "Basilosaurus",
-		types: ["Water", "Rock"],
+		types: ["Water"],
 		baseStats: {hp: 130, atk: 130, def: 65, spa: 70, spd: 65, spe: 70},
-		abilities: {0: "Dry Skin", H: "Solid Rock"},
+		abilities: {0: "Dry Skin", H: "Hydration"},
 		heightm: 5.0,
 		weightkg: 1,		//Not Proper Weight
 		color: "Green",
