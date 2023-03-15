@@ -125,7 +125,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			uproar: ["8M", "7T", "6T", "5T", "4T"],
 			waterpulse: ["7T", "6T", "4M", "3M"],
 			whirlpool: ["8M", "4M"],
-			recover: ["8M"],			//Custom Move, added for Nathan
+			//recover: ["8M"],			//Custom Move, added for Nathan
 		},
 		eventData: [
 			{generation: 3, level: 100, moves: ["irontail", "protect", "metalsound", "doubleedge"], pokeball: "pokeball"},
